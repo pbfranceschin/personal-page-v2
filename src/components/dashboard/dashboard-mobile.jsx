@@ -6,7 +6,7 @@ export default function DashboardMobile ({ openCloseMenu }) {
 
     return (
         <div className={styles.dashboardContainer}>
-            <MenuButton openCloseMenu={openCloseMenu}/>
+            {/* <MenuButton openCloseMenu={openCloseMenu}/> */}
             <div className={styles.dashboard}>
                 <div className={styles.standart}>
                     <img 

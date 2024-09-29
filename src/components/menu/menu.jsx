@@ -2,12 +2,14 @@ import { useCallback, useContext } from 'react';
 import { GitHubIcon, LinkedInIcon, MailIcon, MediumIcon, MoonIcon, SunIcon, VennLogoMono, XIcon } from '../graphics/graphics';
 import styles from './menu.module.css';
 import { AppContext } from '../../context/provider';
+import MenuButton from './menu-button';
 
 export default function Menu () {
     const { openMenu } = useContext(AppContext);
 
     return (
         <>
+        <MenuButton />
         {openMenu && <Overlay/>}
         </>
     )
