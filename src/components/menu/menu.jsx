@@ -1,4 +1,4 @@
-import { useCallback, useContext } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { GitHubIcon, LinkedInIcon, MailIcon, MediumIcon, MoonIcon, SunIcon, VennLogoMono, XIcon } from '../graphics/graphics';
 import styles from './menu.module.css';
 import { AppContext } from '../../context/provider';
@@ -6,20 +6,41 @@ import MenuButton from './menu-button';
 
 export default function Menu () {
     const { openMenu } = useContext(AppContext);
+    const [openOverlay, setOpenOverlay] = useState(false);
+    const [animationClass, setAnimationClass] = useState('');
+    const isMounted = useRef(false);
+    const timeoutRef = useRef(null);
+    
+    useEffect(() => {
+        if (!isMounted.current) {
+            isMounted.current = true;
+            return;
+        }
+
+        if (openMenu) {
+            setOpenOverlay(true);
+            setTimeout(() => setAnimationClass(styles.overlayEnter), 20);
+        } else {
+            setAnimationClass(styles.overlayExit);
+            timeoutRef.current = setTimeout(() => {
+                setOpenOverlay(false);
+            }, 250); // Adjust this to match your animation duration
+        }
+
+        return () => clearTimeout(timeoutRef.current);
+    }, [openMenu]);
 
     return (
         <>
         <MenuButton />
-        {openMenu && <Overlay/>}
+        {openOverlay && <Overlay animationClass={animationClass} />}
         </>
     )
 }
 
-
-export function Overlay () {
-
+export function Overlay ({ animationClass }) {
     return (
-        <div className={styles.overlay}>
+        <div className={`${styles.overlay} ${animationClass}`}>
             <div className={styles.menu}>
                 <div className={styles.largeContainer}>
                     <LanguageSwitch/>

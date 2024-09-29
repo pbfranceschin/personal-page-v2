@@ -56,25 +56,6 @@
     transform: scale(1);
 }
 
-
-@keyframes growIn {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-@keyframes shrinkOut {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(0);
-    }
-}
-
 .overlay {
     position: fixed;
     top: 0;
@@ -85,6 +66,17 @@
     background-color: rgba(var(--bg-color-rgb), 0.9);
     display: flex;
     align-items: center;
+    opacity: 0;
+    /* transform: translateX(-100vw); */
+    transition: opacity 0.25s ease-in-out, transform 0.2s ease-in-out;
+}
+.overlayEnter {
+    /* transform: translateX(0); */
+    opacity: 1;
+}
+.overlayExit {
+    /* transform: translateX(-100vw); */
+    opacity: 0;
 }
 
 .menu {
