@@ -1,7 +1,7 @@
 #root {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@ main {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 0px var(--xPadding);
+  padding: calc(50vh - 250px - 16px - 48px) var(--xPadding) 0px;
   box-sizing: border-box;
 }
 
@@ -40,8 +40,8 @@ main::before {
 .content {
   width: 100%;
   max-width: 1024px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   position: relative;
   z-index: 1;
-  margin: auto;
+  /* margin: auto; */
 }
