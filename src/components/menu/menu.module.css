@@ -1,3 +1,14 @@
+.desktopHidden {
+    display:block;
+}
+
+@media (min-width: 1024px) {
+    .desktopHidden{
+        display: none;
+    }
+}
+
+
 .hamburguer {
     width: 32px;
     height: 32px;

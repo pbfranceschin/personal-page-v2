@@ -1,0 +1,60 @@
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    background-color: rgba(var(--bg-color-rgb), 0.9);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    /* transform: translateX(-100vw); */
+    transition: opacity 0.25s ease-in-out, transform 0.2s ease-in-out;
+}
+.overlayEnter {
+    /* transform: translateX(0); */
+    opacity: 1;
+}
+.overlayExit {
+    /* transform: translateX(-100vw); */
+    opacity: 0;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 0px var(--xPadding);
+}
+
+.largeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.narrowContainer {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switch {
+    display: flex;
+    gap: 8px;
+}
+
+.smallIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.bigIcon {
+    width: 56px;
+    height: 56px;
+}
