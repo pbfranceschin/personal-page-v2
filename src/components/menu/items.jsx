@@ -35,11 +35,11 @@ export const LanguageSwitch = () => {
 
     return (
         <div className={styles.switch}>
-            <span style={ portuguese ? { opacity: 0.6 } : {}}>
+            <span style={ portuguese ? { margin: '8px' , opacity: 0.6 } : { margin: '8px'}}>
                 EN
             </span>
             <Toggle on={portuguese} turnOnOff={handleSwitch} />
-            <span style={ portuguese ? {} : { opacity: 0.6 }}>
+            <span style={ portuguese ? { margin: '8px' } : { margin: '8px',  opacity: 0.6 }}>
                 PT
             </span>
         </div>
