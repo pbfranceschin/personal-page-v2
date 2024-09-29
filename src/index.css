@@ -6,14 +6,31 @@
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87);
   background-color: #242424; */
-  background-color: #ffffff;
+  --bg-color: #ffffff;
+  --bg-color-rgb: 255, 255, 255;
+  --text-color: #333333;
+  --text-color-rgb: 51, 51, 51;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --brown: #6B441E;
+  --gold: #CEBA85;
+  --midgray: #A5A5A5;
+  --lightgray: #d9d9d9;
+  --blue: #3C819F;
+
+  --lowcontrast: #d9d9d9;
+
+  --xPadding: 32px
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -21,6 +38,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
 }
 
 h1 {
