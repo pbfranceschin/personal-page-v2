@@ -8,6 +8,7 @@
     z-index: 9;
     background-color: rgba(var(--bg-color-rgb), 0.9);
     display: flex;
+    justify-content: center;
     align-items: center;
     opacity: 0;
     /* transform: translateX(-100vw); */
@@ -24,6 +25,7 @@
 
 .menu {
     width: 100%;
+    max-width: calc(var(--maxContentWidth) + var(--xPadding)*2);
     display: flex;
     flex-direction: column;
     align-items: center;

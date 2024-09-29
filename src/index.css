@@ -25,7 +25,8 @@
 
   --lowcontrast: #d9d9d9;
 
-  --xPadding: 32px
+  --xPadding: 32px;
+  --maxContentWidth: 400px;
 }
 
 * {

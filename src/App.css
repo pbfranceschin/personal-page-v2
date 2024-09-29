@@ -39,9 +39,9 @@ main::before {
 
 .content {
   width: 100%;
-  max-width: 1024px;
+  max-width: var(--maxContentWidth);
   /* min-height: 100vh; */
   position: relative;
   z-index: 1;
-  /* margin: auto; */
+  margin: auto;
 }
