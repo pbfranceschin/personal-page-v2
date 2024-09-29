@@ -1,4 +1,47 @@
 #root {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px var(--xPadding);
+  box-sizing: border-box;
+}
+
+main::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/img/1024px-La-esfinge.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+/* .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin: auto;
+  height: 100vh;
+  width: auto;
+} */
+
+.content {
+  width: 100%;
+  max-width: 1024px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  margin: auto;
 }
