@@ -3,7 +3,7 @@ import { Hamburguer, CloseIcon } from '../graphics/graphics';
 import styles from './menu.module.css';
 import { AppContext } from '../../context/provider';
 
-export default function MenuButton({ openCloseMenu }) {
+export default function MenuButton() {
     const { setOpenMenu, openMenu } = useContext(AppContext);
     const [isAnimating, setIsAnimating] = useState(false);
     const timeoutRef = useRef(null);
