@@ -10,7 +10,6 @@ function App() {
     setIsMenuOpen(!isMenuOpen)
   }, [setIsMenuOpen, isMenuOpen]);
 
-  console.log('isMenuOpen', isMenuOpen);
 
   return (
     <>
