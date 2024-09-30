@@ -1,12 +1,10 @@
 import styles from './dashboard-mobile.module.css';
 import { BusinessIcon, HammerIcon, InfoIcon, PortfolioIcon } from '../graphics/graphics';
-import MenuButton from '../menu/menu-button';
 
-export default function DashboardMobile ({ openCloseMenu }) {
+export default function DashboardMobile () {
 
     return (
         <div className={styles.dashboardContainer}>
-            {/* <MenuButton openCloseMenu={openCloseMenu}/> */}
             <div className={styles.dashboard}>
                 <div className={styles.standart}>
                     <img 
