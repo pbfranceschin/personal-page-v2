@@ -1,13 +1,19 @@
 
 import { useState, createContext, useMemo } from 'react';
 
+export const HOME = 'HOME';
+export const ABOUT = 'ABOUT';
+export const BUSINESS = 'BUSINESS';
+export const PORTFOLIO = 'PORTFOLIO';
+export const PROJECTS = 'PROJECTS'
+
 export const AppContext = createContext();
 
 export default function AppContextProvider({ children }) {
   const [portuguese, setPortuguese] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  const [page, setPage] = useState('home');
+  const [page, setPage] = useState(HOME);
 
   const contextValue = useMemo(() => ({
     portuguese,
