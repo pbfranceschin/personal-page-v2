@@ -7,6 +7,7 @@ export default function AppContextProvider({ children }) {
   const [portuguese, setPortuguese] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const [page, setPage] = useState('home');
 
   const contextValue = useMemo(() => ({
     portuguese,
@@ -14,8 +15,10 @@ export default function AppContextProvider({ children }) {
     darkMode,
     setDarkMode,
     openMenu,
-    setOpenMenu
-  }), [portuguese, darkMode, openMenu]);
+    setOpenMenu,
+    page,
+    setPage
+  }), [portuguese, darkMode, openMenu, page]);
 
   return (
     <AppContext.Provider value={contextValue}>
