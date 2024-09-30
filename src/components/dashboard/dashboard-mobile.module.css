@@ -26,16 +26,28 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin: 0;
+    padding: 0;
 }
-
 .option {
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    transform: translateX(-100vw);
+    opacity: 0;
 }
 
-.hamburguerContainer {
+.exit {
+    transform: translateX(100vw);
+    opacity: 0;
+}
 
+.enter {
+    transform: translateX(0);
+    opacity: 1;
 }
