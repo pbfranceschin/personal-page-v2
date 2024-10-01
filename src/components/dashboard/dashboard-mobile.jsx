@@ -2,13 +2,8 @@ import styles from './dashboard-mobile.module.css';
 import { BusinessIcon, HammerIcon, InfoIcon, PortfolioIcon } from '../graphics/graphics';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../context/provider';
+import { pageTitles, pageStyles } from '../../utils';
 
-const pageTitles = {
-    "ABOUT": "about pedro's work",
-    "BUSINESS": "pedro's business ventures",
-    "PORTFOLIO": "pedro's work portfolio",
-    "PROJECTS": "pedro's own projects",
-}
 
 export default function DashboardMobile () {
     const { page, setPage } = useContext(AppContext);
@@ -131,17 +126,25 @@ export default function DashboardMobile () {
 function PageMenuRow1 ({ page }) {
 
     const title = pageTitles[`${page}`];
+    const { background, color } = pageStyles[`${page}`];
 
     return (
             <div className={styles.row}>
                 <button 
                 className={styles.topButton}
-                style={{ backgroundColor: 'var(--gold)'}}
+                style={{ 
+                    backgroundColor: background.secondary,
+                    color: color.secondary,
+                }}
                 >
                 </button>
                 <button 
                 className={styles.topButton}
-                style={{ backgroundColor: 'var(--brown)', paddingInline: '1rem'}}
+                style={{ 
+                    paddingInline: '1rem',
+                    backgroundColor: background.primary, 
+                    color: color.primary
+                }}
                 >
                     <h2
                     style={{ 
