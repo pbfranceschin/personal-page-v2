@@ -1,8 +1,15 @@
 import styles from './dashboard-mobile.module.css';
-import { BusinessIcon, HammerIcon, InfoIcon, PortfolioIcon } from '../graphics/graphics';
+import { BusinessIcon, CVIcon, GlobeIcon, HammerIcon, InfoIcon, MailIcon, PortfolioIcon } from '../graphics/graphics';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../context/provider';
 import { pageTitles, pageStyles } from '../../utils';
+
+const pageIcon = {
+    "ABOUT": <CVIcon/>,
+    "BUSINESS": <GlobeIcon/>,
+    "PORTFOLIO": <MailIcon/>,
+    "PROJECTS": <MailIcon/>
+}
 
 
 export default function DashboardMobile () {
@@ -127,6 +134,7 @@ function PageMenuRow1 ({ page }) {
 
     const title = pageTitles[`${page}`];
     const { background, color } = pageStyles[`${page}`];
+    const icon = pageIcon[`${page}`];
 
     return (
             <div className={styles.row}>
@@ -137,6 +145,9 @@ function PageMenuRow1 ({ page }) {
                     color: color.secondary,
                 }}
                 >
+                    <div style={{ width: '56px', height: '56px', margin: 'auto'}}>
+                        {icon}
+                    </div>
                 </button>
                 <button 
                 className={styles.topButton}
