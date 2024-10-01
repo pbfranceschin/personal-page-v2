@@ -28,12 +28,12 @@
     margin: 0;
     padding: 0;
     position: relative; /* Add this */
-    height: 332px; /* Adjust this to accommodate all items */
+    height: 344px; /* Adjust this to accommodate all items */
 }
 
 .option {
     width: 100%;
-    height: 80px;
+    /* height: 80px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,3 +61,29 @@
 .option:nth-child(2) { top: 88px; }
 .option:nth-child(3) { top: 176px; }
 .option:nth-child(4) { top: 264px; }
+
+.pageMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+
+.topButton {
+    width: 50%;
+    height: 80px;
+    cursor: pointer;
+    border: none;
+}
+
+.backButton {
+    width: 100%;
+    height: 48px;
+    border: none;
+}

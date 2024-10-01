@@ -3,6 +3,13 @@ import { BusinessIcon, HammerIcon, InfoIcon, PortfolioIcon } from '../graphics/g
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../context/provider';
 
+const pageTitles = {
+    "ABOUT": "about pedro's work",
+    "BUSINESS": "pedro's business ventures",
+    "PORTFOLIO": "pedro's work portfolio",
+    "PROJECTS": "pedro's own projects",
+}
+
 export default function DashboardMobile () {
     const { page, setPage } = useContext(AppContext);
     const isAnimating = useRef(false);
@@ -42,10 +49,7 @@ export default function DashboardMobile () {
         { page: PORTFOLIO, icon: <PortfolioIcon/>, style: { backgroundColor: 'var(--brown)', color: 'var(--lightgray)' } },
         { page: PROJECTS, icon: <HammerIcon/>, style: { backgroundColor: 'var(--gold)' } },
     ];
-    // page === HOME
-    // animateEnter === HOME
-    // animateChange === ABOUT
-    // isAnimating === TRUE
+    
     const renderMenuItem = (item, index) => {
         const shouldRender = page === HOME || page === item.page; //true
         const shouldExit = animateChange !== HOME && animateChange !== item.page; //false pra ABOUT
@@ -63,6 +67,7 @@ export default function DashboardMobile () {
                 className={`${styles.option} ${shouldExit ? styles.exit : shouldEnter ? styles.enter : ''}`}
                 style={{
                     ...item.style,
+                    height: '80px',
                     transitionDelay: `${index * 50}ms`,
                     top: `${topPosition}px`
                 }}
@@ -73,13 +78,39 @@ export default function DashboardMobile () {
         );
     };
 
-    console.log('page', page)
-    console.log('isAnimating', isAnimating.current)
+    const menuPageRows = [
+        <PageMenuRow1 page={page}/>,
+        <BackButton onClick={() => handleClick(HOME)}/>
+    ]
+    
+    const renderPageMenu = (item, index) => {
+        const shouldRender = page !== HOME;
+        const shouldExit = animateChange === HOME;
+        const shouldEnter = animateEnter !== HOME;
+
+        if (!shouldRender && !shouldExit) return null;
+        if (shouldExit && !isAnimating.current) return null;
+
+        const topPosition = (index + 1) * 88;
+
+        return (
+            <li
+                key={`page-menu`}
+                className={`${styles.option} ${shouldExit ? styles.exit : shouldEnter ? styles.enter : ''}`}
+                style={{
+                    transitionDelay: `${index * 50}ms`,
+                    top: `${topPosition}px`,                    
+                }}
+            >
+                {item}
+            </li>
+        )
+    }
 
     return (
         <div className={styles.dashboardContainer}>
             <div className={styles.dashboard}>
-                <button onClick={() => handleClick(HOME)}>back</button>
+                {/* <button onClick={() => handleClick(HOME)}>back</button> */}
                 <div className={styles.standart}>
                     <img 
                     src='/img/flag-icon.svg' 
@@ -90,8 +121,50 @@ export default function DashboardMobile () {
                 </div>
                 <ul className={styles.menu}>
                     {menuItems.map(renderMenuItem)}
+                    {menuPageRows.map(renderPageMenu)}
                 </ul>
             </div>
         </div>
     );
+}
+
+function PageMenuRow1 ({ page }) {
+
+    const title = pageTitles[`${page}`];
+
+    return (
+            <div className={styles.row}>
+                <button 
+                className={styles.topButton}
+                style={{ backgroundColor: 'var(--gold)'}}
+                >
+                </button>
+                <button 
+                className={styles.topButton}
+                style={{ backgroundColor: 'var(--brown)', paddingInline: '1rem'}}
+                >
+                    <h2
+                    style={{ 
+                        width: '80%',
+                        textTransform: 'uppercase',
+                        textAlign: 'left',
+                        textWrap: 'balance'
+                    }}
+                    >{title}</h2>
+                </button>
+            </div>
+    )
+}
+
+function BackButton ({ onClick }) {
+
+    return (
+        <button
+            onClick={onClick}
+            className={styles.backButton} 
+            style={{ backgroundColor: 'var(--lightgray)' }}
+            >
+                <img src='/img/go-back.svg' alt='back' height={36}  width={36}/>
+        </button>
+    )
 }
