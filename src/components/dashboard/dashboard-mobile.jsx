@@ -95,7 +95,7 @@ export default function DashboardMobile () {
 
         return (
             <li
-                key={`page-menu`}
+                key={`page-menu ${index}`}
                 className={`${styles.option} ${shouldExit ? styles.exit : shouldEnter ? styles.enter : ''}`}
                 style={{
                     transitionDelay: `${index * 50}ms`,
