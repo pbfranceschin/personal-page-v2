@@ -1,0 +1,78 @@
+.dashboardContainer {
+    width: 100%;
+    display: flex;
+    margin-top: 16px;
+}
+
+.dashboard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.standart {
+    width: 100%;
+    height: 145px;
+    border-radius: 99px 99px 0px 0px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 468px;
+}
+
+.option {
+    width: 50%;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out, top 0.25 ease-in-out;
+    position: absolute;
+    opacity: 0;
+}
+
+.option:nth-child(1) { 
+    top: 0;
+    left: 0;
+    transform: translateX(-100vw);
+}
+.option:nth-child(2) { 
+    top: 0;
+    right: 0;
+    transform: translateX(100vw);
+}
+.option:nth-child(3) { 
+    top: 238px;
+    left: 0
+}
+.option:nth-child(4) {
+    top: 238px;
+    right: 0;
+}
+
+.exitLeft {
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+
+.exitRight {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+.enter {
+    transform: translate(0);
+    opacity: 1;
+}
