@@ -33,6 +33,11 @@
   box-sizing: border-box;
 }
 
+button {
+  padding: 0;
+  border: none;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -47,6 +52,12 @@ body {
 h1 {
   font-size: 1.25rem;
   line-height: 1.1;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.125rem;
+  margin: 0;
 }
 
 p {
