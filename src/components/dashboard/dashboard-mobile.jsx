@@ -21,7 +21,7 @@ export default function DashboardMobile () {
             setPage(pageSelected);
             setTimeout(() => {
                 setAnimateEnter(pageSelected);
-            }, 20);
+            }, 50);
             isAnimating.current = false;
         }, 250);
     }, [setPage]);
@@ -54,13 +54,17 @@ export default function DashboardMobile () {
         if (!shouldRender && !shouldExit) return null;
         if (shouldExit && !isAnimating.current) return null; // Remove after exit animation
 
+        const currentIndex = menuItems.filter(i => page === HOME ? true : i.page === page).indexOf(item);
+        const topPosition = currentIndex * 88; // 80px height + 8px gap
+
         return (
             <li 
                 key={item.page}
                 className={`${styles.option} ${shouldExit ? styles.exit : shouldEnter ? styles.enter : ''}`}
                 style={{
                     ...item.style,
-                    transitionDelay: `${index * 50}ms`
+                    transitionDelay: `${index * 50}ms`,
+                    top: `${topPosition}px`
                 }}
                 onClick={() => handleClick(item.page)}
             >
