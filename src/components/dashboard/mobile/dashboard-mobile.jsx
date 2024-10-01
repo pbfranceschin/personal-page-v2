@@ -1,15 +1,9 @@
 import styles from './dashboard-mobile.module.css';
-import { BusinessIcon, CVIcon, GlobeIcon, HammerIcon, InfoIcon, MailIcon, PortfolioIcon } from '../graphics/graphics';
+import { BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../context/provider';
-import { pageTitles, pageStyles } from '../../utils';
-
-const pageIcon = {
-    "ABOUT": <CVIcon/>,
-    "BUSINESS": <GlobeIcon/>,
-    "PORTFOLIO": <MailIcon/>,
-    "PROJECTS": <MailIcon/>
-}
+import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../../context/provider';
+import { pageTitles, pageStyles } from '../../../utils';
+import { pageIcon } from '../common';
 
 
 export default function DashboardMobile () {

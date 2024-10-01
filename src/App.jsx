@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
-import DashboardMobile from './components/dashboard/dashboard-mobile';
 import './App.css'
 import Menu from './components/menu/menu';
+import Dashboard from './components/dashboard/dashboard';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ function App() {
       /> */}
       <Menu/>
       <div className='content'>
-        <DashboardMobile openCloseMenu={handleMenuButton}/>
+        <Dashboard />
       </div>
     </main> 
     </>
