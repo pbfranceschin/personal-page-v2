@@ -1,4 +1,18 @@
-.menuIcon {
+.iconLarge {
     width: 56px;
-    height: auto;
+    height: 56px;
+}
+
+@media(min-width: 744px) {
+    .iconLarge {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .iconLarge {
+        width: 80px;
+        height: 80px;
+    }
 }
