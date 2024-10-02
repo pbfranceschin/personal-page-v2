@@ -81,7 +81,7 @@
 @media (min-width: 1024px) {
     .option {
         width: 276px;
-        height: 230px;
+        height: 226px;
         transition: all 0.25s ease-in-out, top 0.25s ease-in-out, left 0.25s ease-in-out;
     }
     .option:nth-child(1) { 
@@ -95,12 +95,12 @@
         transform: translateY(-100vh)
     }
     .option:nth-child(3) { 
-        top: 238px;
+        top: calc(226px + 16px);
         left: 0;
         transform: translateY(100vh)
     }
     .option:nth-child(4) {
-        top: 238px;
+        top: calc(226px + 16px);
         left: calc(276px + 16px);
         transform: translateY(100vh)
     }
@@ -201,4 +201,16 @@
         height: 302px;
     }
 
+}
+
+.backIcon {
+    width: 40px;
+    height: 40px;
+}
+
+@media(min-width: 1024px) {
+    .backIcon {
+        width: 48px;
+        height: 48px;
+    }
 }

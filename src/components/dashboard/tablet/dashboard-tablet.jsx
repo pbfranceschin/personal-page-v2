@@ -82,7 +82,7 @@ export default function DashboardTablet ({ isDesktop }) {
         if (shouldExit && !isAnimating.current) return null; // Remove after exit animation
 
         const currentIndex = menuItems.filter(i => page === HOME ? true : i.page === page).indexOf(item);
-        const topPosition = currentIndex > 1 ? (isDesktop ? 238 : 196) : 0; 
+        const topPosition = currentIndex > 1 ? (isDesktop ? (226 + 16) : 196) : 0; 
 
         return (
             <li 
@@ -164,7 +164,7 @@ const BackButton = ({ onClick }) => {
         <button 
         onClick={onClick}
         className={styles.backButton}>
-            <img src='/img/go-back.svg' alt='back' height={48}  width={48}/>
+            <img src='/img/go-back.svg' alt='back' className={styles.backIcon}/>
         </button>
     )
 }
