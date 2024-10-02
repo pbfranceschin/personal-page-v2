@@ -8,7 +8,32 @@ function isEven(number) {
     return number % 2 === 0;
 }
 
-export default function DashboardTablet () {
+const resoveAnimateStyle = (isDesktop, shouldExit, shouldEnter, index ) => {
+    if(isDesktop) {
+        return shouldExit ? index > 1 ? styles.exitUp : styles.exitDown : shouldEnter ? styles.enter : '';
+    } else {
+        return shouldExit ? isEven(index) ? styles.exitLeft : styles.exitRight : shouldEnter ? styles.enter : '';
+    }
+}
+
+const resolvePageMenuLeftPosition = (isDesktop, index) => {
+    if(isDesktop) {
+        return index > 1 ? (180 + 16 + 80 + 16) : (180 + 16);
+    }
+    else {
+        return index > 1 ? (68 + 188) : index * 68;
+    }
+}
+
+const resolvePageMenuTopPosition = (isDesktop, index) => {
+    if(isDesktop) {
+        return index > 0 ? (151 + 16) : 0;
+    } else {
+        return 128;
+    }
+}
+
+export default function DashboardTablet ({ isDesktop }) {
     const { page, setPage } = useContext(AppContext);
     const isAnimating = useRef(false);
     const [animateEnter, setAnimateEnter] = useState(null);
@@ -57,12 +82,12 @@ export default function DashboardTablet () {
         if (shouldExit && !isAnimating.current) return null; // Remove after exit animation
 
         const currentIndex = menuItems.filter(i => page === HOME ? true : i.page === page).indexOf(item);
-        const topPosition = currentIndex > 1 ? 188 + 8 : 0; 
+        const topPosition = currentIndex > 1 ? (isDesktop ? 238 : 196) : 0; 
 
         return (
             <li 
                 key={item.page}
-                className={`${styles.option} ${shouldExit ? isEven(index) ? styles.exitLeft : styles.exitRight : shouldEnter ? styles.enter : ''} ${isSelected ? styles.selected : ''}`}
+                className={`${styles.option} ${resoveAnimateStyle(false, shouldExit, shouldEnter, index)} ${isSelected ? styles.selected : ''}`}
                 style={{
                     ...item.style,
                     transitionDelay: `${index * 50}ms`,
@@ -76,7 +101,13 @@ export default function DashboardTablet () {
     };
 
     
-    const pageMenuItems = [
+    const pageMenuItems = isDesktop 
+    ? [
+        <ResourceButton page={page} onClick={() => {}} />,
+        <BackButton onClick={() => handleClick(HOME)} />,
+        <TitleButton page={page} onClick={() => {}} />
+    ]
+    :[
         <BackButton onClick={() => handleClick(HOME)} />,
         <ResourceButton page={page} onClick={() => {}} />,
         <TitleButton page={page} onClick={() => {}} />
@@ -96,7 +127,8 @@ export default function DashboardTablet () {
                 className={`${styles.pageMenuItem} ${shouldExit ? styles.exit : shouldEnter ? styles.enter : ''}`}
                 style={{
                     transitionDelay: `${index * 50}ms`,
-                    left: `${index > 1 ? (68 + 188) : index * 68}px`
+                    left: `${resolvePageMenuLeftPosition(isDesktop, index)}px`,
+                    top: `${resolvePageMenuTopPosition(isDesktop, index)}px`
                 }}
             >
                 {item}
@@ -108,7 +140,7 @@ export default function DashboardTablet () {
     return (
         <div className={styles.dashboardContainer}>
             <div className={styles.dashboard}>
-                <button onClick={() => handleClick(HOME)}>back</button>
+                {/* <button onClick={() => handleClick(HOME)}>back</button> */}
                 <div className={styles.standart}>
                     <img 
                     src='/img/flag-icon.svg' 

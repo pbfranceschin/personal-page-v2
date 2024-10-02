@@ -36,10 +36,12 @@ export default function Dashboard() {
             case 'mobile':
                 return <DashboardMobile />;
             case 'tablet':
-                return <DashboardTablet />;
             case 'desktop':
             default:
-                return <></>;
+                return <DashboardTablet isDesktop={deviceType === 'desktop'}/>;
+            // case 'desktop':
+            // default:
+            //     return <></>;
         }
     };
 

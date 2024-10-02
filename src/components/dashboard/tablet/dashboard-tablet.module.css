@@ -29,7 +29,21 @@
     margin: 0;
     padding: 0;
     position: relative;
-    height: 384px
+    height: 468px;
+}
+
+@media (min-width: 1024px) {
+    .dashboard {
+        flex-direction: row;
+    }
+    .standart {
+        height: 100%;
+        width: 180px;
+        border-radius: 99px 0 0 99px;
+    }
+    .menu {
+        width: 568px;
+    }
 }
 
 .option {
@@ -42,7 +56,6 @@
     position: absolute;
     opacity: 0;
 }
-
 
 .option:nth-child(1) { 
     top: 0;
@@ -65,6 +78,34 @@
     transform: translateX(100vw);
 }
 
+@media (min-width: 1024px) {
+    .option {
+        width: 276px;
+        height: 230px;
+        transition: all 0.25s ease-in-out, top 0.25s ease-in-out, left 0.25s ease-in-out;
+    }
+    .option:nth-child(1) { 
+        top: 0;
+        left: 0;
+        transform: translateY(-100vh)
+    }
+    .option:nth-child(2) { 
+        top: 0;
+        left: calc(276px + 16px);
+        transform: translateY(-100vh)
+    }
+    .option:nth-child(3) { 
+        top: 238px;
+        left: 0;
+        transform: translateY(100vh)
+    }
+    .option:nth-child(4) {
+        top: 238px;
+        left: calc(276px + 16px);
+        transform: translateY(100vh)
+    }
+}
+
 .option.exitLeft {
     transform: translateX(-100vw);
     opacity: 0;
@@ -75,12 +116,23 @@
     opacity: 0;
 }
 
+.option.exitUp {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+.option.exitDown {
+    transform: translateY(100vh);
+    opacity: 0;
+}
+
 .option.enter {
     transform: translate(0);
     opacity: 1;
 }
 
 .option.selected {
+    left: 0;
     width: 468px;
     height: 120px;
 }
@@ -116,7 +168,7 @@
 .pageMenuItem {
     transition: all 0.25s ease-in-out;
     position: absolute;
-    top: 128px;
+    /* top: 128px; */
     opacity: 0;
     transform: translateY(100vh);
 }
@@ -129,4 +181,24 @@
 .pageMenuItem.enter {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+    .option.selected {
+        width: 180px;
+        height: 100%;
+    }
+    .backButton {
+        width: 80px;
+        height: 302px;
+    }
+    .resourceButton {
+        width: 370px;
+        height: 151px;
+    }
+    .titleButton {
+        width: 274px;
+        height: 302px;
+    }
+
 }
