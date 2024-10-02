@@ -29,19 +29,20 @@
     margin: 0;
     padding: 0;
     position: relative;
-    height: 468px;
+    height: 384px
 }
 
 .option {
-    width: 50%;
-    height: 230px;
+    width: 230px;
+    height: 188px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.25s ease-in-out, top 0.25 ease-in-out;
+    transition: all 0.25s ease-in-out, top 0.25s ease-in-out;
     position: absolute;
     opacity: 0;
 }
+
 
 .option:nth-child(1) { 
     top: 0;
@@ -54,25 +55,78 @@
     transform: translateX(100vw);
 }
 .option:nth-child(3) { 
-    top: 238px;
-    left: 0
+    top: 196px;
+    left: 0;
+    transform: translateX(-100vw);
 }
 .option:nth-child(4) {
-    top: 238px;
+    top: 196px;
     right: 0;
+    transform: translateX(100vw);
 }
 
-.exitLeft {
+.option.exitLeft {
     transform: translateX(-100vw);
     opacity: 0;
 }
 
-.exitRight {
+.option.exitRight {
     transform: translateX(100vw);
     opacity: 0;
 }
 
-.enter {
+.option.enter {
     transform: translate(0);
     opacity: 1;
+}
+
+.option.selected {
+    width: 468px;
+    height: 120px;
+}
+
+.backButton {
+    width: 60px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--bg-color-rgb), 0.8);
+    color: var(--text-color);
+}
+
+.resourceButton {
+    width: 180px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleButton {
+    width: 212px;
+    height: 170px;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 24px;
+}
+
+.pageMenuItem {
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    top: 128px;
+    opacity: 0;
+    transform: translateY(100vh);
+}
+
+.pageMenuItem.exit {
+    opacity: 0;
+    transform: translateY(100vh);
+}
+
+.pageMenuItem.enter {
+    opacity: 1;
+    transform: translateY(0);
 }

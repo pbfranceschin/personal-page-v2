@@ -1,10 +1,10 @@
-import { CVIcon, GlobeIcon, MailIcon } from "../graphics/graphics"
+import { CVIcon, GlobeIcon, MailIconLarge } from "../graphics/graphics"
 
 export const pageIcon = {
     "ABOUT": <CVIcon/>,
     "BUSINESS": <GlobeIcon/>,
-    "PORTFOLIO": <MailIcon/>,
-    "PROJECTS": <MailIcon/>
+    "PORTFOLIO": <MailIconLarge/>,
+    "PROJECTS": <MailIconLarge/>
 }
 
 

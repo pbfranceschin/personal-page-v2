@@ -6,7 +6,7 @@ import DashboardTablet from "./tablet/dashboard-tablet";
 /**FAZER CODE SPLTTING */
 
 const BREAKPOINTS = {
-  mobile: 640,
+  mobile: 744,
   tablet: 1024
 };
 
