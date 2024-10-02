@@ -33,12 +33,14 @@
 
 @media (min-width: 744px) {
   :root {
+    --xPadding: 64px;
     --maxContentWidth: 468px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
+    --xPadding: 80px;
     --maxContentWidth: 764px;
   }
 }

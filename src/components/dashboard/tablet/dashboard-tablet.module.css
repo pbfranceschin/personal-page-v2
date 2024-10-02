@@ -1,7 +1,7 @@
 .dashboardContainer {
     width: 100%;
     display: flex;
-    margin-top: 16px;
+    margin-top: 32px;
 }
 
 .dashboard {
@@ -33,6 +33,9 @@
 }
 
 @media (min-width: 1024px) {
+    .dashboardContainer {
+        margin-top: 64px;
+    }
     .dashboard {
         flex-direction: row;
     }
