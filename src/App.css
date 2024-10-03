@@ -11,7 +11,7 @@ main {
   width: 100%;
   max-width: 1104px; /*1024 + padding*/
   min-height: 100vh;
-  padding: calc(50vh - 250px - 16px - 48px) var(--xPadding) 0px;
+  /* padding: calc(50vh - 250px - 16px - 48px) var(--xPadding) 0px; */
   box-sizing: border-box;
 }
 
@@ -45,12 +45,22 @@ main::before {
   height: 100vh;
   width: auto;
 } */
-
-.content {
+.nav {
+  width: 100%;
+  padding: calc(50vh - 250px - 16px - 48px) var(--xPadding) 0px;
+}
+.top {
   width: 100%;
   max-width: var(--maxContentWidth);
   /* min-height: 100vh; */
   position: relative;
   z-index: 1;
   margin: auto;
+}
+
+.page {
+  width: 100%;
+  max-width: 760px;
+  margin: auto;
+  margin-bottom: 64px;;
 }

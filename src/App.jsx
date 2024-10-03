@@ -1,15 +1,12 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
 import './App.css'
 import Menu from './components/menu/menu';
 import Dashboard from './components/dashboard/dashboard';
+import { ABOUT, AppContext } from './context/provider';
+import About from './components/about/about';
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  const handleMenuButton = useCallback(() => {
-    setIsMenuOpen(!isMenuOpen)
-  }, [setIsMenuOpen, isMenuOpen]);
-
+  const { page } = useContext(AppContext);
 
   return (
     <>
@@ -21,9 +18,14 @@ function App() {
       width='auto'
       alt='background'
       /> */}
-      <Menu/>
-      <div className='content'>
-        <Dashboard />
+      <div className='nav'>
+        <Menu/>
+        <div className='top'>
+          <Dashboard />
+        </div>
+      </div>
+      <div className='page'>
+        {(page === ABOUT && <About/>)}
       </div>
     </main> 
     </>
