@@ -5,7 +5,7 @@ export default function About () {
     return (
         <div className={styles.aboutPage}>
             <div className={styles.firstParagraphContainer}>
-                <div className={styles.textBoxContainer}>
+                <div className={styles.textBoxContainer} style={{ marginTop: 0 }}>
                     <div className={styles.line}></div>
                     <div className={styles.textBox}>
                     <p>
