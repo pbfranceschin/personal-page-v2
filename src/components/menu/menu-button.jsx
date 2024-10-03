@@ -25,14 +25,14 @@ export default function MenuButton() {
 
     return (
         <div className={styles.buttonContainer}>
-            <div className={`${styles.button} ${!openMenu ? styles.open : styles.close}`} onClick={handleClick}>
+            <button className={`${styles.button} ${!openMenu ? styles.open : styles.close}`} onClick={handleClick}>
                 <div className={`${styles.iconWrapper} ${styles.hamburguerWrapper} ${openMenu ? styles.buttonExit : (isAnimating && !openMenu ? styles.buttonEnter : '')}`}>
                     <Hamburguer />
                 </div>
                 <div className={`${styles.iconWrapper} ${styles.closeWrapper} ${!openMenu ? styles.buttonExit : (isAnimating && openMenu ? styles.buttonEnter : '')}`}>
                     <CloseIcon />
                 </div>
-            </div>
+            </button>
         </div>
     )
 }
