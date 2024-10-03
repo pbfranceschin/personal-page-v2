@@ -62,5 +62,6 @@ main::before {
   width: 100%;
   max-width: 760px;
   margin: auto;
-  margin-bottom: 64px;;
+  margin-bottom: 64px;
+  overflow: hidden;
 }
