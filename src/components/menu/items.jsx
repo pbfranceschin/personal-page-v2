@@ -67,8 +67,8 @@ export const Switches = () => {
 export const Work = () => {
     return (
         <div className={styles.workContainer}>
-            <div className={styles.bigIcon}><MailIcon /></div>
-            <div className={styles.bigIcon}><VennLogoMono /></div>
+            <a className={styles.bigIcon}><MailIcon /></a>
+            <a className={styles.bigIcon}><VennLogoMono /></a>
         </div>
     )
 }
