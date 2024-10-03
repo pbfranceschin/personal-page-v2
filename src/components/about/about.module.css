@@ -27,7 +27,7 @@
 
 .textBox {
     width: 100%;
-    padding: var(--xPadding);
+    padding: var(--textBoxPadding);
     background-color: var(--bg-color);
     color: var(--text-color);
     text-align: justify;
@@ -40,7 +40,7 @@
     background-color: var(--bg-color);
 }
 
-@media(min-width:744px) {
+/* @media(min-width:744px) {
     .textBox {
         padding: 40px;
     }
@@ -51,4 +51,4 @@
     .textBox {
         padding: 48px;
     }
-}
+} */

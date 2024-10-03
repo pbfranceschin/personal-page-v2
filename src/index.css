@@ -27,6 +27,7 @@
   --lowcontrast: #d9d9d9;
 
   --xPadding: 32px;
+  --textBoxPadding: 32px;
   --maxContentWidth: 400px;
 
   --desktopBreakpoint: 1024px;
@@ -36,6 +37,7 @@
 @media (min-width: 744px) {
   :root {
     --xPadding: 64px;
+    --textBoxPadding: 40px;
     --maxContentWidth: 468px;
   }
 }
@@ -43,6 +45,7 @@
 @media (min-width: 1024px) {
   :root {
     --xPadding: 80px;
+    --textBoxPadding: 48px;
     --maxContentWidth: 764px;
   }
 }
