@@ -7,9 +7,7 @@ export default function Menu() {
     return (
         <>
         <MenuButton />
-        <div className={styles.desktopHidden}>
-            <OverlayMenu/>
-        </div>
+        <OverlayMenu/>
         </>
     )
 }

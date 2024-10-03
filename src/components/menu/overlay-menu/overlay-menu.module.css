@@ -14,11 +14,11 @@
     /* transform: translateX(-100vw); */
     transition: opacity 0.25s ease-in-out, transform 0.2s ease-in-out;
 }
-.overlayEnter {
+.overlay.enter {
     /* transform: translateX(0); */
     opacity: 1;
 }
-.overlayExit {
+.overlay.exit {
     /* transform: translateX(-100vw); */
     opacity: 0;
 }
@@ -31,6 +31,41 @@
     align-items: center;
     gap: 48px;
     padding: 0px var(--xPadding);
+    transition: transform 0.25s ease-in-out;
+}
+.menu.exit,
+.menu.enter {
+    opacity: 1;
+}
+
+@media (min-width: 1024px) {
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+        align-items: start;
+    }
+    .menu {
+        transform: translateY(-100%);
+        width: fit-content;
+        max-width: none;
+        flex-direction: row;
+        padding: 32px 48px;
+        background-color: rgba(var(--bg-color-rgb), 0.8);
+        color: var(--text-color);
+    }
+    .overlay.enter {
+        transition-delay: 0s;
+    }
+    .overlay.exit {
+        transition-delay: 0.2s;
+    }
+    .menu.enter{
+        transform: translateY(0);
+        transition-delay: 0.2s;
+    }
+    .menu.exit {
+        transform: translateY(-100%);
+        transition-delay: 0s;
+    }
 }
 
 .largeContainer {

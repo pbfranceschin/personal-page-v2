@@ -18,9 +18,9 @@ export default function OverlayMenu () {
 
         if (openMenu) {
             setOpenOverlay(true);
-            setTimeout(() => setAnimationClass(styles.overlayEnter), 20);
+            setTimeout(() => setAnimationClass(styles.enter), 20);
         } else {
-            setAnimationClass(styles.overlayExit);
+            setAnimationClass(styles.exit);
             timeoutRef.current = setTimeout(() => {
                 setOpenOverlay(false);
             }, 250); // Adjust this to match your animation duration
@@ -39,7 +39,7 @@ export default function OverlayMenu () {
 function Overlay ({ animationClass }) {
     return (
         <div className={`${styles.overlay} ${animationClass}`}>
-            <div className={styles.menu}>
+            <div className={`${styles.menu} ${animationClass}`}>
                 <div className={styles.largeContainer}>
                     <LanguageSwitch/>
                     <LightDarkSwitch/>
@@ -57,7 +57,7 @@ function Overlay ({ animationClass }) {
                 width: 'fit-content'
             }}>
                 <span style={{ opacity: 0.6, margin: '8px'}}>
-                    background art by David Gore.
+                    background art: <i>La Esfinge</i>, by David Gore.
                 </span>
             </div>
         </div>
