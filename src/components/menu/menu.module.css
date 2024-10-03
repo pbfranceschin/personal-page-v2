@@ -140,7 +140,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 744px) {
     .socialsIcon {
         width: 36px;
         height: 36px;
