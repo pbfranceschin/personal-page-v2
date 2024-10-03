@@ -55,9 +55,18 @@ const Toggle = ({ on, turnOnOff}) => {
     )
 }
 
+export const Switches = () => {
+    return (
+        <div className={styles.switchesContainer}>
+            <LanguageSwitch/>
+            <LightDarkSwitch/>
+        </div>
+    )
+}
+
 export const Work = () => {
     return (
-        <div className={styles.narrowContainer}>
+        <div className={styles.workContainer}>
             <div className={styles.bigIcon}><MailIcon /></div>
             <div className={styles.bigIcon}><VennLogoMono /></div>
         </div>
@@ -66,7 +75,7 @@ export const Work = () => {
 
 export const Socials = () => {
     return (
-        <div className={styles.largeContainer}>
+        <div className={styles.socialsContainer}>
             <a>
                 <div className={styles.smallIcon}>
                     <GitHubIcon/>

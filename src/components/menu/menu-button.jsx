@@ -25,7 +25,7 @@ export default function MenuButton() {
 
     return (
         <div className={styles.buttonContainer}>
-            <div className={`${styles.button} ${!openMenu ? styles.open : ''}`} onClick={handleClick}>
+            <div className={`${styles.button} ${!openMenu ? styles.open : styles.close}`} onClick={handleClick}>
                 <div className={`${styles.iconWrapper} ${styles.hamburguerWrapper} ${openMenu ? styles.buttonExit : (isAnimating && !openMenu ? styles.buttonEnter : '')}`}>
                     <Hamburguer />
                 </div>

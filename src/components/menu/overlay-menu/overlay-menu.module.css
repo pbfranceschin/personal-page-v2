@@ -50,7 +50,7 @@
         max-width: none;
         flex-direction: row;
         padding: 32px 48px;
-        background-color: rgba(var(--bg-color-rgb), 0.8);
+        background-color: rgba(var(--bg-color-rgb), 0.6);
         color: var(--text-color);
     }
     .overlay.enter {

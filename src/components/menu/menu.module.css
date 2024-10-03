@@ -36,6 +36,13 @@
 .open {
     background-color: rgba(var(--bg-color-rgb), 0.6);
 }
+.close {
+    background-color: transparent;
+}
+
+@media (min-width: 1024px) {
+    .close {background-color: rgba(var(--bg-color-rgb), 0.6);}
+}
 
 .iconWrapper {
     position: absolute;
@@ -67,17 +74,45 @@
     transform: scale(1);
 }
 
-.largeContainer {
+.switchesContainer,
+.socialsContainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.narrowContainer {
+.workContainer {
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+    .switchesContainer,
+    .socialsContainer,
+    .workContainer {
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+    }
+    .socialsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        column-gap: 48px;
+        row-gap: 24px;
+    }
+    .switchesContainer {
+        gap: 24px;
+    }
+    .switchesContainer{
+        flex-direction: column;
+    }
+    .workContainer {
+        gap: 48px;
+    }
+
 }
 
 .switch {
@@ -86,10 +121,26 @@
     gap: 8px;
 }
 
+.socialsIcon,
 .smallIcon {
     width: 24px;
     height: 24px;
     margin: 8px;
+}
+.bigIcon {
+    width: 56px;
+    height: 56px;
+    margin: 8px;
+}
+@media (min-width: 1024px) {
+    .socialsIcon {
+        width: 36px;
+        height: 36px;
+    }
+    .bigIcon {
+        width: 64px;
+        height: 64px;
+    }
 }
 
 .toggle {
@@ -137,8 +188,3 @@
     }
 }
 
-.bigIcon {
-    width: 56px;
-    height: 56px;
-    margin: 8px;
-}

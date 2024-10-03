@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import styles from './overlay-menu.module.css';
 import { AppContext } from '../../../context/provider';
-import { LanguageSwitch, LightDarkSwitch, Socials, Work } from '../items';
+import { LanguageSwitch, LightDarkSwitch, Socials, Switches, Work } from '../items';
 
 export default function OverlayMenu () {
     const { openMenu } = useContext(AppContext);
@@ -40,10 +40,7 @@ function Overlay ({ animationClass }) {
     return (
         <div className={`${styles.overlay} ${animationClass}`}>
             <div className={`${styles.menu} ${animationClass}`}>
-                <div className={styles.largeContainer}>
-                    <LanguageSwitch/>
-                    <LightDarkSwitch/>
-                </div>
+                <Switches/>
                 <Work/>
                 <Socials/>
             </div>
