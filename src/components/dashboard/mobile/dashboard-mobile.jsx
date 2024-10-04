@@ -2,11 +2,11 @@ import styles from './dashboard-mobile.module.css';
 import { BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../../context/provider';
-import { pageTitles, pageStyles } from '../../../utils';
+import { pageTitles, pageStyles, scrollToRef } from '../../../utils';
 import { pageIcon } from '../common';
 
 
-export default function DashboardMobile () {
+export default function DashboardMobile ({ pageRef }) {
     const { page, setPage } = useContext(AppContext);
     const isAnimating = useRef(false);
     // const [animateMenu, setAnimateMenu] = useState(null);
@@ -75,7 +75,7 @@ export default function DashboardMobile () {
     };
 
     const menuPageRows = [
-        <PageMenuRow1 page={page}/>,
+        <PageMenuRow1 page={page} onClick={() => scrollToRef(pageRef)}/>,
         <BackButton onClick={() => handleClick(HOME)}/>
     ]
     
@@ -124,7 +124,7 @@ export default function DashboardMobile () {
     );
 }
 
-function PageMenuRow1 ({ page }) {
+function PageMenuRow1 ({ page, onClick }) {
 
     const title = pageTitles[`${page}`];
     const { background, color } = pageStyles[`${page}`];
@@ -150,6 +150,7 @@ function PageMenuRow1 ({ page }) {
                     backgroundColor: background.primary, 
                     color: color.primary
                 }}
+                onClick={onClick}
                 >
                     <h2
                     style={{ 

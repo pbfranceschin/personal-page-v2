@@ -10,7 +10,7 @@ const BREAKPOINTS = {
   tablet: 1024
 };
 
-export default function Dashboard() {
+export default function Dashboard({ pageRef }) {
     const [deviceType, setDeviceType] = useState('desktop');
 
     const checkScreenSize = useCallback(() => {
@@ -34,11 +34,11 @@ export default function Dashboard() {
     const renderDashboard = () => {
         switch (deviceType) {
             case 'mobile':
-                return <DashboardMobile />;
+                return <DashboardMobile pageRef={pageRef}/>;
             case 'tablet':
             case 'desktop':
             default:
-                return <DashboardTablet isDesktop={deviceType === 'desktop'}/>;
+                return <DashboardTablet isDesktop={deviceType === 'desktop'} pageRef={pageRef}/>;
             // case 'desktop':
             // default:
             //     return <></>;

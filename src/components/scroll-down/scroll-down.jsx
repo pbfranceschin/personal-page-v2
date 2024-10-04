@@ -1,7 +1,7 @@
 import styles from './scroll-down.module.css';
 import { ChevronDown } from '../graphics/graphics';
 import { useEffect, useState } from 'react';
-import { scrollTo } from '../../utils';
+import { scrollToRef } from '../../utils';
 
 const scrollThreshold = 100;
 
@@ -23,7 +23,7 @@ export default function ScrollDownButton ({ pageRef }) {
 
     return (
         <div className={`${styles.buttonContainer} ${isHidden ? styles.hidden : ''}`}>
-            <button className={styles.button} onClick={() => scrollTo(pageRef)}>
+            <button className={styles.button} onClick={() => scrollToRef(pageRef)}>
                 <ChevronDown/>
             </button>
         </div>

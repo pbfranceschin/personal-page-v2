@@ -3,6 +3,7 @@ import styles from './dashboard-tablet.module.css';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../../context/provider';
 import { pageTitles, pageStyles, pageIcon } from '../common';
 import { BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
+import { scrollToRef } from '../../../utils';
 
 function isEven(number) {
     return number % 2 === 0;
@@ -35,7 +36,7 @@ const resolvePageMenuTopPosition = (isDesktop, index) => {
     }
 }
 
-export default function DashboardTablet ({ isDesktop }) {
+export default function DashboardTablet ({ isDesktop, pageRef }) {
     const { page, setPage } = useContext(AppContext);
     const isAnimating = useRef(false);
     const [animateEnter, setAnimateEnter] = useState(null);
@@ -109,12 +110,12 @@ export default function DashboardTablet ({ isDesktop }) {
     ? [
         <ResourceButton page={page} onClick={() => {}} />,
         <BackButton onClick={() => handleClick(HOME)} />,
-        <TitleButton page={page} onClick={() => {}} />
+        <TitleButton page={page} onClick={() => scrollToRef(pageRef)}/>
     ]
     :[
         <BackButton onClick={() => handleClick(HOME)} />,
         <ResourceButton page={page} onClick={() => {}} />,
-        <TitleButton page={page} onClick={() => {}} />
+        <TitleButton page={page} onClick={() => scrollToRef(pageRef)}/>
     ];
 
     const renderPageMenu = (item, index) => {

@@ -1,5 +1,5 @@
 
-export const scrollTo = (ref) => {
+export const scrollToRef = (ref) => {
     if(ref.current) {
         setTimeout(() => {
             ref.current.scrollIntoView({ behavior: 'smooth' });
