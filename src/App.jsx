@@ -26,7 +26,7 @@ function App() {
     <>
     <main>
       <div id='nav' className='nav' ref={navRef}>
-        <Menu/>
+        <Menu navRef={navRef} pageRef={pageRef}/>
         <div className='top'>
           <Dashboard />
         </div>

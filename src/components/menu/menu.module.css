@@ -32,13 +32,19 @@
     align-items: center;
     border-radius: 50%;
     margin: 8px;
-    color: var(--text-color);
 }
 .open {
     background-color: rgba(var(--bg-color-rgb), 0.6);
+    color: var(--text-color);
 }
 .close {
     background-color: transparent;
+    color: var(--text-color);
+}
+
+.openSecondary {
+    background-color: rgba(var(--midcontrast-rgb), 0.8);
+    color: var(--bg-color);
 }
 
 @media (min-width: 1024px) {
@@ -203,3 +209,24 @@
     }
 }
 
+.scrollUp,
+.menuFixed {
+    position: fixed;
+    transition: transform 0.25s ease-in-out;
+}
+.menuFixed {
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    z-index: 10;
+}
+.scrollUp {
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+}
+
+.scrollUp.enter,
+.menuFixed.enter {
+    transform: translateY(0);
+}

@@ -1,12 +1,16 @@
-import { useCallback, useContext, useRef, useState, useEffect } from 'react';
-import { Hamburguer, CloseIcon } from '../graphics/graphics';
+import { useCallback, useContext, useRef, useState, useEffect, useMemo } from 'react';
+import { Hamburguer, CloseIcon, ScrollUpIcon } from '../graphics/graphics';
 import styles from './menu.module.css';
 import { AppContext } from '../../context/provider';
 
-export default function MenuButton() {
+export default function MenuButton({ openClass }) {
     const { setOpenMenu, openMenu } = useContext(AppContext);
     const [isAnimating, setIsAnimating] = useState(false);
     const timeoutRef = useRef(null);
+
+    const _openClass = useMemo(() => openClass ?? styles.open, [openClass]);
+    // console.log('_openStyle', _openStyle)
+
 
     const handleClick = useCallback(() => {
         if (isAnimating) return;
@@ -24,8 +28,7 @@ export default function MenuButton() {
     }, []);
 
     return (
-        <div className={styles.buttonContainer}>
-            <button className={`${styles.button} ${!openMenu ? styles.open : styles.close}`} onClick={handleClick}>
+            <button className={`${styles.button} ${!openMenu ? _openClass : styles.close}`} onClick={handleClick}>
                 <div className={`${styles.iconWrapper} ${styles.hamburguerWrapper} ${openMenu ? styles.buttonExit : (isAnimating && !openMenu ? styles.buttonEnter : '')}`}>
                     <Hamburguer />
                 </div>
@@ -33,6 +36,27 @@ export default function MenuButton() {
                     <CloseIcon />
                 </div>
             </button>
-        </div>
+    )
+}
+
+
+export function ScrollUpButton ({ style }) {
+
+    console.log(style)
+
+    const handleClick = () => {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+    }
+
+    return (
+        <button 
+        className={styles.button} 
+        onClick={handleClick}
+        style={style}
+        >
+            <ScrollUpIcon/>
+        </button>
     )
 }
