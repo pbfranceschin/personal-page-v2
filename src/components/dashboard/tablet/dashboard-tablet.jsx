@@ -10,7 +10,9 @@ function isEven(number) {
 
 const resoveAnimateStyle = (isDesktop, shouldExit, shouldEnter, index ) => {
     if(isDesktop) {
-        return shouldExit ? index > 1 ? styles.exitUp : styles.exitDown : shouldEnter ? styles.enter : '';
+        const a = shouldExit ? index < 2 ? styles.exitUp : styles.exitDown : shouldEnter ? styles.enter : '';
+        // console.log(index, 'animate', a);
+        return a;
     } else {
         return shouldExit ? isEven(index) ? styles.exitLeft : styles.exitRight : shouldEnter ? styles.enter : '';
     }
@@ -40,6 +42,8 @@ export default function DashboardTablet ({ isDesktop }) {
     const [animateChange, setAnimateChange] = useState(null);
     const [initialRender, setInitialRender] = useState(true);
     const timeoutRef = useRef(null);
+
+    console.log('isDesktop', isDesktop)
 
     const handleClick = useCallback((pageSelected) => {
         if (isAnimating.current) return;
@@ -87,7 +91,7 @@ export default function DashboardTablet ({ isDesktop }) {
         return (
             <li 
                 key={item.page}
-                className={`${styles.option} ${resoveAnimateStyle(false, shouldExit, shouldEnter, index)} ${isSelected ? styles.selected : ''}`}
+                className={`${styles.option} ${resoveAnimateStyle(isDesktop, shouldExit, shouldEnter, index)} ${isSelected ? styles.selected : ''}`}
                 style={{
                     ...item.style,
                     transitionDelay: `${index * 50}ms`,
