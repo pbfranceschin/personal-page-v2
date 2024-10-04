@@ -1,4 +1,13 @@
 
+export const scrollTo = (ref) => {
+    if(ref.current) {
+        setTimeout(() => {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    }
+}
+
+
 export const pageTitles = {
     "ABOUT": "about pedro's work",
     "BUSINESS": "pedro's business ventures",
