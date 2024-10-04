@@ -12,7 +12,7 @@ export default function About () {
                         Pedro Franceschin is a self taught web(3) full stack developer and smart contract engineer with particular expertise in EVM environments.
                         {/* <br/>
                         <br/> */}
-                        {' '}Although proficient in web development, he is particularly interested in leveraging blockchain technology to enable the institutional decentralization of all things.
+                        {' '}Although proficient in web development, he is particularly interested in leveraging blockchain technology to enable the progressive decentralization of all things.
                     </p>
                 </div>
                 </div>
@@ -34,10 +34,10 @@ export default function About () {
                 <div className={styles.textBoxContainer}>
                     <div className={styles.textBox}>
                         <p>
-                            Pedro has an academic background in engineering (B.Sc) and Applied Economics (M.A). As a developer he is a member of Venn, a software studio focused on web/web3 solutions. He acts as full-stack dev, smart-contract/protocol engineer and sometimes web designer.
+                            Pedro has an academic background in engineering (B.Sc) and Applied Economics (M.A). As a developer he is a member of Venn, a software studio focused on web/web3 solutions. He acts as full-stack dev, protocol/smart-contract engineer and sometimes web designer.
                             <br/>
                             <br/>
-                            Aside from his work as a developer, Pedro is also an entrepreneur. He is a co-founder at the aforementioned Venn studio. Their main project at the moment is a NFT rental solution, currently being called Venn Protocol.
+                            Aside from his work as a developer, Pedro is also an entrepreneur. He is a co-founder at the aforementioned Venn studio. Their main project at the moment is a NFT rental solution, currently being called <i>Venn Protocol</i>.
                             <br/>
                             <br/>
                             He has always had an entrepreneurial vein, having opened his first business at the young age of 23 in a non tech sector (namely food and beverages), before realizing his true calling was helping develop awesome technology. He also worked for while for Fundação Getúlio Vargas as an academic researcher/developer, focused on blockchain technology, after he graduated as a Master of Arts in Applied Economics in Universidade de São Paulo, having written his dissertation on Blockchain protocols.
