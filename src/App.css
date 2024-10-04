@@ -59,9 +59,14 @@ main::before {
 }
 
 .page {
+  position: relative;
   width: 100%;
   max-width: 760px;
   margin: auto;
   margin-bottom: 64px;
+  /* overflow: hidden; */
+}
+.pageContent {
+  width: 100%;
   overflow: hidden;
 }

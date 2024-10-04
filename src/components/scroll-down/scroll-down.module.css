@@ -1,0 +1,49 @@
+.buttonContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    padding: 24px;
+    transform: translateY(-100%);
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.buttonContainer.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.button {
+    width: 64px;
+    height: 64px;
+    animation: colorShift 1.25s ease-in-out infinite forwards;
+    background-color: transparent;
+}
+
+@media(min-width: 1024px) {
+    .button {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes colorShift {
+    0% {
+        color: var(--text-color);
+    }
+    25% {
+        color: var(--lowcontrast);
+    }
+    50% {
+        color: var(--midcontrast);
+    }
+    75% {
+        color: var(--bg-color);
+    }
+    100% {
+        color: var(--text-color);
+    }
+}

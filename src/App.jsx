@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard/dashboard';
 import { ABOUT, AppContext, BUSINESS, HOME } from './context/provider';
 import About from './components/about/about';
 import Business from './components/business/business';
+import ScrollDownButton from './components/scroll-down/scroll-down';
 
 function App() {
   const { page } = useContext(AppContext);
@@ -15,9 +16,9 @@ function App() {
     if (pageRef.current && navRef.current) {
       if(page !== HOME){
         const navHeight = navRef.current.offsetHeight;
-        pageRef.current.style.marginTop = `calc(100vh - ${navHeight}px)`;
+        pageRef.current.style.marginBlock = `calc(100vh - ${navHeight}px)`;
       } else {
-        pageRef.current.style.marginTop = 0;
+        pageRef.current.style.marginBlock = 0;
       }
     }
   }, [page]);
@@ -32,8 +33,11 @@ function App() {
         </div>
       </div>
       <div id='page' className='page' ref={pageRef}>
-        {(page === ABOUT) && <About/>}
-        {(page === BUSINESS) && <Business/>}
+        {page !== HOME && <ScrollDownButton pageRef={pageRef}/>}
+        <div className='pageContent'>
+          {(page === ABOUT) && <About/>}
+          {(page === BUSINESS) && <Business/>}
+        </div>
       </div>
     </main> 
     </>
