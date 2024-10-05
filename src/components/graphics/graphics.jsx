@@ -203,21 +203,27 @@ export const VennLogoMono = () => {
 
 export const GlobeIcon = () => {
     return (
+        <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_871_346)">
+            <path d="M7 28C7 30.7578 7.54318 33.4885 8.59853 36.0364C9.65388 38.5842 11.2007 40.8992 13.1508 42.8492C15.1008 44.7993 17.4158 46.3461 19.9636 47.4015C22.5115 48.4568 25.2422 49 28 49C30.7578 49 33.4885 48.4568 36.0364 47.4015C38.5842 46.3461 40.8992 44.7993 42.8492 42.8492C44.7993 40.8992 46.3461 38.5842 47.4015 36.0364C48.4568 33.4885 49 30.7578 49 28C49 22.4305 46.7875 17.089 42.8492 13.1508C38.911 9.21249 33.5695 7 28 7C22.4305 7 17.089 9.21249 13.1508 13.1508C9.21249 17.089 7 22.4305 7 28Z" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.4 21H47.6" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.4 35H47.6" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M26.8333 7C22.9025 13.2991 20.8185 20.575 20.8185 28C20.8185 35.425 22.9025 42.7009 26.8333 49" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M29.1667 7C33.0975 13.2991 35.1815 20.575 35.1815 28C35.1815 35.425 33.0975 42.7009 29.1667 49" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_871_346">
+            <rect width="56" height="56" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
+export const GlobeIconLarge = () => {
+    return (
         <div className={styles.iconLarge}>
-            <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_871_346)">
-                <path d="M7 28C7 30.7578 7.54318 33.4885 8.59853 36.0364C9.65388 38.5842 11.2007 40.8992 13.1508 42.8492C15.1008 44.7993 17.4158 46.3461 19.9636 47.4015C22.5115 48.4568 25.2422 49 28 49C30.7578 49 33.4885 48.4568 36.0364 47.4015C38.5842 46.3461 40.8992 44.7993 42.8492 42.8492C44.7993 40.8992 46.3461 38.5842 47.4015 36.0364C48.4568 33.4885 49 30.7578 49 28C49 22.4305 46.7875 17.089 42.8492 13.1508C38.911 9.21249 33.5695 7 28 7C22.4305 7 17.089 9.21249 13.1508 13.1508C9.21249 17.089 7 22.4305 7 28Z" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8.4 21H47.6" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8.4 35H47.6" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M26.8333 7C22.9025 13.2991 20.8185 20.575 20.8185 28C20.8185 35.425 22.9025 42.7009 26.8333 49" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M29.1667 7C33.0975 13.2991 35.1815 20.575 35.1815 28C35.1815 35.425 33.0975 42.7009 29.1667 49" stroke="currentColor" strokeWidth="4.66667" strokeLinecap="round" strokeLinejoin="round"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_871_346">
-                <rect width="56" height="56" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
+            <GlobeIcon/>
         </div>
     )
 }
