@@ -2,10 +2,11 @@ import { useCallback, useContext, useState, useEffect, useRef } from 'react';
 import './App.css'
 import Menu from './components/menu/menu';
 import Dashboard from './components/dashboard/dashboard';
-import { ABOUT, AppContext, BUSINESS, HOME } from './context/provider';
+import { ABOUT, AppContext, BUSINESS, HOME, PORTFOLIO } from './context/provider';
 import About from './components/about/about';
 import Business from './components/business/business';
 import ScrollDownButton from './components/scroll-down/scroll-down';
+import Portfolio from './components/portfolio/portfolio';
 
 function App() {
   const { page } = useContext(AppContext);
@@ -37,6 +38,7 @@ function App() {
         <div className='pageContent'>
           {(page === ABOUT) && <About/>}
           {(page === BUSINESS) && <Business/>}
+          {(page === PORTFOLIO) && <Portfolio/>}
         </div>
       </div>
     </main> 
