@@ -9,18 +9,13 @@ export default function MenuButton({ openClass, closeTrigger }) {
     const timeoutRef = useRef(null);
 
     const _openClass = useMemo(() => openClass ?? styles.open, [openClass]);
-    // console.log('_openStyle', _openS tyle)
-    console.log('isAnimating', isAnimating)
-    console.log('openMenu', openMenu);
 
     const handleClick = useCallback(() => {
-        console.log('isAnimating handler', isAnimating)
         if (isAnimating) return;
         setIsAnimating(true);
         
         clearTimeout(timeoutRef.current);
         timeoutRef.current = setTimeout(() => {
-            console.log('openig menu...')
             setOpenMenu(!openMenu);
             setIsAnimating(false);
         }, 250);
@@ -67,8 +62,6 @@ export default function MenuButton({ openClass, closeTrigger }) {
 
 
 export function ScrollUpButton ({ style }) {
-
-    console.log(style)
 
     const handleClick = () => {
         setTimeout(() => {
