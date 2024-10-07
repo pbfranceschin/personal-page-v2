@@ -13,6 +13,7 @@
     opacity: 0;
     /* transform: translateX(-100vw); */
     transition: opacity 0.25s ease-in-out, transform 0.2s ease-in-out;
+    pointer-events: none;
 }
 .overlay.enter {
     /* transform: translateX(0); */
@@ -33,6 +34,7 @@
     padding: 0px var(--xPadding);
     transition: transform 0.25s ease-in-out;
     border-radius: 0px 0px 50px 50px;
+    pointer-events: all;
 }
 .menu.exit,
 .menu.enter {
@@ -43,6 +45,7 @@
     .overlay {
         background-color: rgba(0, 0, 0, 0.8);
         align-items: start;
+        pointer-events: all;
     }
     .menu {
         transform: translateY(-100%);

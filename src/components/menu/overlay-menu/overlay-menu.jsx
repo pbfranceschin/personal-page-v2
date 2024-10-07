@@ -3,7 +3,7 @@ import styles from './overlay-menu.module.css';
 import { AppContext } from '../../../context/provider';
 import { LanguageSwitch, LightDarkSwitch, Socials, Switches, Work } from '../items';
 
-export default function OverlayMenu () {
+export default function OverlayMenu ({ handleClickOverlayBackdrop }) {
     const { openMenu } = useContext(AppContext);
     const [openOverlay, setOpenOverlay] = useState(false);
     const [animationClass, setAnimationClass] = useState('');
@@ -31,15 +31,15 @@ export default function OverlayMenu () {
 
     return (
         <>
-        {openOverlay && <Overlay animationClass={animationClass} />}
+        {openOverlay && <Overlay animationClass={animationClass} handleClickOverlayBackdrop={handleClickOverlayBackdrop} />}
         </>
     )
 }
 
-function Overlay ({ animationClass }) {
+function Overlay ({ animationClass, handleClickOverlayBackdrop }) {
     return (
-        <div className={`${styles.overlay} ${animationClass}`}>
-            <div className={`${styles.menu} ${animationClass}`}>
+        <div className={`${styles.overlay} ${animationClass}`} onClick={handleClickOverlayBackdrop}>
+            <div className={`${styles.menu} ${animationClass}`} onClick={(e) => e.stopPropagation()}>
                 <Switches/>
                 <Work/>
                 <Socials/>

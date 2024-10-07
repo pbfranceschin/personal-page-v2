@@ -3,7 +3,7 @@ import { Hamburguer, CloseIcon, ScrollUpIcon } from '../graphics/graphics';
 import styles from './menu.module.css';
 import { AppContext } from '../../context/provider';
 
-export default function MenuButton({ openClass }) {
+export default function MenuButton({ openClass, closeTrigger }) {
     const { setOpenMenu, openMenu } = useContext(AppContext);
     const [isAnimating, setIsAnimating] = useState(false);
     const timeoutRef = useRef(null);
@@ -38,6 +38,12 @@ export default function MenuButton({ openClass }) {
             document.removeEventListener('keydown', handleEscKey);
         };
     }, [handleEscKey]);
+
+    useEffect(() => {
+        if(openMenu) {
+            handleClick();
+        }
+    }, [closeTrigger])
 
     useEffect(() => {
         return () => {

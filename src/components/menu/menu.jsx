@@ -11,6 +11,7 @@ export default function Menu({ navRef }) {
     const [lastScrollY, setLastScrollY] = useState(0);
     const scrollUpRef = useRef(null);
     const menuFixedRef = useRef(null);
+    const [closeTrigger, setCloseTrigger] = useState(false);
 
     const setMargins = () => {
         if(navRef && scrollUpRef && menuFixedRef ) {
@@ -26,6 +27,10 @@ export default function Menu({ navRef }) {
             }
         }
     };
+
+    const handleClickOverlayBackdrop = () => {
+        setCloseTrigger(!closeTrigger);
+    }
 
     useEffect(() => {
         setMargins();
@@ -82,9 +87,9 @@ export default function Menu({ navRef }) {
     return (
         <>
         <div className={styles.buttonContainer}>
-            <MenuButton />
+            <MenuButton closeTrigger={closeTrigger} />
         </div>
-        <OverlayMenu/>
+        <OverlayMenu handleClickOverlayBackdrop={handleClickOverlayBackdrop} />
 
         <div 
         ref={menuFixedRef}
