@@ -44,7 +44,7 @@ export default function DashboardTablet ({ isDesktop, pageRef }) {
     const [initialRender, setInitialRender] = useState(true);
     const timeoutRef = useRef(null);
 
-    console.log('isDesktop', isDesktop)
+    // console.log('isDesktop', isDesktop)
 
     const handleClick = useCallback((pageSelected) => {
         if (isAnimating.current) return;
