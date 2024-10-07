@@ -54,6 +54,8 @@
         flex-direction: row;
         padding: 32px 48px;
         background-color: rgba(var(--bg-color-rgb), 0.6);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-top: none;
         color: var(--text-color);
     }
     .overlay.enter {
@@ -98,4 +100,15 @@
 .bigIcon {
     width: 56px;
     height: 56px;
+}
+
+.footnote {
+    opacity: 0.6;
+    margin: 8px;
+}
+
+@media (min-width: 1024px) {
+    .footnote {
+        color: #ffffff;
+    }
 }

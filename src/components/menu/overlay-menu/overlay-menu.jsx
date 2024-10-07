@@ -53,7 +53,7 @@ function Overlay ({ animationClass, handleClickOverlayBackdrop }) {
                 margin: 'auto',
                 width: 'fit-content'
             }}>
-                <span style={{ opacity: 0.6, margin: '8px'}}>
+                <span className={styles.footnote}>
                     background art: <i>La Esfinge</i>, by David Gore.
                 </span>
             </div>

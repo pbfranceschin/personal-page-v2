@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styles from './dashboard-tablet.module.css';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../../context/provider';
 import { pageTitles, pageStyles, pageIcon } from '../common';
-import { BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
+import { BackIcon, BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
 import { scrollToRef } from '../../../utils';
 
 function isEven(number) {
@@ -168,7 +168,7 @@ const BackButton = ({ onClick }) => {
         <button 
         onClick={onClick}
         className={styles.backButton}>
-            <img src='/img/go-back.svg' alt='back' className={styles.backIcon}/>
+            <div className={styles.backIcon}><BackIcon/></div>
         </button>
     )
 }

@@ -1,5 +1,5 @@
 
-import { useState, createContext, useMemo } from 'react';
+import { useState, createContext, useMemo, useCallback, useEffect, useRef } from 'react';
 
 export const HOME = 'HOME';
 export const ABOUT = 'ABOUT';
@@ -14,6 +14,34 @@ export default function AppContextProvider({ children }) {
   const [darkMode, setDarkMode] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [page, setPage] = useState(HOME);
+  const isMounted = useRef(false);
+
+  console.log('darkMode', darkMode)
+
+  const setTheme = useCallback((isDark) => {
+    console.log('setting theme', isDark)
+    if (isDark) {
+      document.documentElement.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  }, []);
+  
+  useEffect(() => {
+    if (!isMounted.current) {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setDarkMode(savedTheme === 'dark');
+      } else {
+        setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+      isMounted.current = true;
+    } else {
+      setTheme(darkMode);
+    }
+  }, [darkMode]);
 
   const contextValue = useMemo(() => ({
     portuguese,

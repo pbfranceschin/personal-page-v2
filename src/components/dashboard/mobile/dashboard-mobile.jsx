@@ -1,5 +1,5 @@
 import styles from './dashboard-mobile.module.css';
-import { BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
+import { BackIcon, BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../../context/provider';
 import { pageTitles, pageStyles, scrollToRef } from '../../../utils';
@@ -175,9 +175,17 @@ function BackButton ({ onClick }) {
         <button
             onClick={onClick}
             className={styles.backButton} 
-            style={{ backgroundColor: 'var(--lightgray)' }}
+            style={{ 
+                backgroundColor: 'rgba(var(--bg-color-rgb), 0.8)', 
+                color: 'var(--text-color)' 
+            }}
             >
-                <img src='/img/go-back.svg' alt='back' height={36}  width={36}/>
+                <div style={{ 
+                    width: '36px',
+                    height: '36px'    
+                }}>
+                    <BackIcon/>
+                </div>
         </button>
     )
 }

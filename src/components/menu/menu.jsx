@@ -99,7 +99,7 @@ export default function Menu({ navRef }) {
         <div 
         ref={scrollUpRef}
         className={`${styles.scrollUp} ${scrollUpAnimateClass}`}>
-            <ScrollUpButton style={{ backgroundColor: fixedButtonBackground }}/>
+            <ScrollUpButton style={{ backgroundColor: fixedButtonBackground, color: 'rgba(var(--bg-color-rgb), 0.8)' }}/>
         </div>
         </>
     )
