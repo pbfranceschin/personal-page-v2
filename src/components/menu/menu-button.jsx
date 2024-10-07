@@ -9,22 +9,42 @@ export default function MenuButton({ openClass }) {
     const timeoutRef = useRef(null);
 
     const _openClass = useMemo(() => openClass ?? styles.open, [openClass]);
-    // console.log('_openStyle', _openStyle)
-
+    // console.log('_openStyle', _openS tyle)
+    console.log('isAnimating', isAnimating)
+    console.log('openMenu', openMenu);
 
     const handleClick = useCallback(() => {
+        console.log('isAnimating handler', isAnimating)
         if (isAnimating) return;
         setIsAnimating(true);
         
         clearTimeout(timeoutRef.current);
         timeoutRef.current = setTimeout(() => {
+            console.log('openig menu...')
             setOpenMenu(!openMenu);
             setIsAnimating(false);
         }, 250);
     }, [setOpenMenu, openMenu, isAnimating]);
+    
+    const handleEscKey = useCallback((event) => {
+        if (event.key === 'Escape' && openMenu) {
+            handleClick();
+        }
+    }, [handleClick, openMenu]);
 
     useEffect(() => {
-        return () => clearTimeout(timeoutRef.current);
+        document.addEventListener('keydown', handleEscKey);
+        return () => {
+            document.removeEventListener('keydown', handleEscKey);
+        };
+    }, [handleEscKey]);
+
+    useEffect(() => {
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
     }, []);
 
     return (
