@@ -93,14 +93,13 @@ export default function DashboardTablet ({ isDesktop, pageRef }) {
             <li 
                 key={item.page}
                 className={`${styles.option} ${resoveAnimateStyle(isDesktop, shouldExit, shouldEnter, index)} ${isSelected ? styles.selected : ''}`}
-                style={{
-                    ...item.style,
+                style={{                    
                     transitionDelay: `${index * 50}ms`,
                     top: `${topPosition}px`
                 }}
                 onClick={() => handleClick(item.page)}
             >
-                {item.icon}
+                <button style={item.style}>{item.icon}</button>
             </li>
         );
     };

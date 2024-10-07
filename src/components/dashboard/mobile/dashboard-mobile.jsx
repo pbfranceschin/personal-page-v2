@@ -61,15 +61,19 @@ export default function DashboardMobile ({ pageRef }) {
             <li 
                 key={item.page}
                 className={`${styles.option} ${shouldExit ? styles.exit : shouldEnter ? styles.enter : ''}`}
-                style={{
-                    ...item.style,
+                style={{                    
                     height: '80px',
                     transitionDelay: `${index * 50}ms`,
                     top: `${topPosition}px`
                 }}
                 onClick={() => handleClick(item.page)}
             >
-                {item.icon}
+                <button 
+                // className={}
+                style={item.style}
+                >
+                    {item.icon}
+                </button>
             </li>
         );
     };

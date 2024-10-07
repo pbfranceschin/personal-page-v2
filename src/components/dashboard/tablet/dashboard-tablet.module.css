@@ -81,6 +81,14 @@
     transform: translateX(100vw);
 }
 
+.option > button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 1024px) {
     .option {
         width: 276px;
