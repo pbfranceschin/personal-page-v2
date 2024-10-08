@@ -3,7 +3,7 @@ import { BackIcon, BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '..
 import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS, EN, PT } from '../../../context/provider';
 import { scrollToRef } from '../../../utils';
-import { pageTitles, pageStyles, pageIcon } from '../common';
+import { pageTitles, pageStyles, pageIcon, pageLink } from '../common';
 
 export default function DashboardMobile ({ pageRef }) {
     const { page, setPage } = useContext(AppContext);
@@ -78,7 +78,7 @@ export default function DashboardMobile ({ pageRef }) {
     };
 
     const menuPageRows = [
-        <PageMenuRow1 page={page} onClick={() => scrollToRef(pageRef)}/>,
+        <PageMenuRow1 page={page} onClick={() => scrollToRef(pageRef)} link={pageLink[page]}/>,
         <BackButton onClick={() => handleClick(HOME)}/>
     ]
     
@@ -127,7 +127,7 @@ export default function DashboardMobile ({ pageRef }) {
     );
 }
 
-function PageMenuRow1 ({ page, onClick }) {
+function PageMenuRow1 ({ page, onClick, link }) {
     // const { portuguese } = useContext(AppContext);
     // const language = useMemo(() => portuguese ? PT : EN, [portuguese]);
 
@@ -137,17 +137,20 @@ function PageMenuRow1 ({ page, onClick }) {
 
     return (
             <div className={styles.row}>
-                <button 
-                className={styles.topButton}
-                style={{ 
-                    backgroundColor: background.secondary,
-                    color: color.secondary,
-                }}
-                >
-                    <div style={{ width: '56px', height: '56px', margin: 'auto'}}>
-                        {icon}
-                    </div>
-                </button>
+                <a className={styles.topButton} href={link} target='_blank' rel='noopener noreferrer' download={page === ABOUT}>
+                    <button 
+                    style={{
+                        width: '100%',
+                        height:'100%',
+                        backgroundColor: background.secondary,
+                        color: color.secondary,
+                    }}
+                    >
+                        <div style={{ width: '56px', height: '56px', margin: 'auto'}}>
+                            {icon}
+                        </div>
+                    </button>
+                </a>
                 <button 
                 className={styles.topButton}
                 style={{ 
