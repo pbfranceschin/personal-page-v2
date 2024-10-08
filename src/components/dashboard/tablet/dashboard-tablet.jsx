@@ -1,7 +1,7 @@
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styles from './dashboard-tablet.module.css';
 import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS, EN } from '../../../context/provider';
-import { pageTitles, pageStyles, pageIcon, pageHandler } from '../common';
+import { pageTitles, pageStyles, pageIcon, pageLink } from '../common';
 import { BackIcon, BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
 import { scrollToRef } from '../../../utils';
 
@@ -107,13 +107,13 @@ export default function DashboardTablet ({ isDesktop, pageRef }) {
     
     const pageMenuItems = isDesktop 
     ? [
-        <ResourceButton page={page} onClick={pageHandler[page]} />,
+        <ResourceButton page={page} link={pageLink[page]} />,
         <BackButton onClick={() => handleClick(HOME)} />,
         <TitleButton page={page} onClick={() => scrollToRef(pageRef)}/>
     ]
     :[
         <BackButton onClick={() => handleClick(HOME)} />,
-        <ResourceButton page={page} onClick={pageHandler[page]} />,
+        <ResourceButton page={page} link={pageLink[page]} />,
         <TitleButton page={page} onClick={() => scrollToRef(pageRef)}/>
     ];
 
@@ -173,21 +173,23 @@ const BackButton = ({ onClick }) => {
     )
 }
 
-const ResourceButton = ({ page, onClick }) => {
+const ResourceButton = ({ page, link }) => {
     const { background, color } = pageStyles[`${page}`];
     const icon = pageIcon[`${page}`];
     const style={
         backgroundColor: background.secondary,
         color: color.secondary
     }
+    console.log('link', link)
     return (
-        <button 
-        onClick={onClick}
-        className={styles.resourceButton}
-        style={style}
-        >
-            {icon}
-        </button>
+        <a href={link} target='_blank' rel='noopener noreferrer' download={page === ABOUT}>
+            <button 
+            className={styles.resourceButton}
+            style={style}
+            >
+                {icon}
+            </button>
+        </a>
     )
 }
 

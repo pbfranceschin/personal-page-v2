@@ -8,11 +8,11 @@ export const pageIcon = {
     "PROJECTS": <GlobeIconLarge/>
 }
 
-export const pageHandler = {
-    "ABOUT": () => {},
-    "BUSINESS": () => openUrl("https://australopitech.xyz"),
-    "PORTFOLIO": () => openUrl("https://venn-protocol.vercel.app/"),
-    "PROJECTS": () => openUrl("https://venn-protocol.vercel.app/"),
+export const pageLink = {
+    "ABOUT": "/pedro_franceschin-cv.pdf",
+    "BUSINESS": "https://australopitech.xyz",
+    "PORTFOLIO": "mailto:pbfranceschin@gmail.com",
+    "PROJECTS": "https://venn-protocol.vercel.app/",
 }
 
 
