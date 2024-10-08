@@ -1,4 +1,4 @@
-import { CVIcon, GlobeIconLarge, MailIconLarge } from "../graphics/graphics"
+import { CVIcon, GlobeIconLarge, MailIconLarge } from "../graphics/graphics";
 
 export const pageIcon = {
     "ABOUT": <CVIcon/>,
@@ -9,10 +9,18 @@ export const pageIcon = {
 
 
 export const pageTitles = {
-    "ABOUT": "about pedro's work",
-    "BUSINESS": "pedro's business ventures",
-    "PORTFOLIO": "pedro's work portfolio",
-    "PROJECTS": "pedro's own projects",
+    "en":{
+        "ABOUT": "about pedro's work",
+        "BUSINESS": "pedro's business ventures",
+        "PORTFOLIO": "pedro's work portfolio",
+        "PROJECTS": "pedro's own projects",
+    },
+    "pt": {
+        "ABOUT": "sobre trabalhos do pedro",
+        "BUSINESS": "negócios do pedro",
+        "PORTFOLIO": "portfolio do pedro",
+        "PROJECTS": "projetos autorais do pedro",
+    }
 }
 
 export const pageStyles = {

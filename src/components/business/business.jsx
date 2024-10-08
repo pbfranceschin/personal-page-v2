@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import styles from './business.module.css';
+import { AppContext } from '../../context/provider';
 
 
 export default function Business() {
+    const { pageContent } = useContext(AppContext);
+    const { business } = pageContent;
 
     return (
         <div className={styles.businessContainer}>
@@ -13,14 +17,18 @@ export default function Business() {
                 />
                 <h2 className={styles.audiowideRegular}>Venn Studio</h2>
                 <p>
-                    Software studio focused on innovative solutions to web and mobile apps, decentralized apps, smart contract protocols and other digital solutions. Consulting on application development, including blockchain and decentralized apps.
-                    <br/><br/>
-                    Founded in 2024 after a year or so of collaboration between it’s 3 founders, Pedro Franceschin, Bernardo Franceschin and Fernanda Duarte.
-                    <br/><br/>
+                    {business.venn.description.map((item) => {
+                        return (
+                            <>
+                            {item}
+                            <br/><br/>
+                            </>
+                        )
+                    })}
                     <span style={{ opacity: 0.6}}>
-                        Role:
+                        {business.label}{' '}
                     </span>
-                    Co-owner, engineer, full-stack developer.
+                    {business.venn.role}
                 </p>
             </div>
         </div>

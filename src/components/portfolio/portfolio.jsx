@@ -1,8 +1,12 @@
 import styles from './portfolio.module.css';
 import { GitHubIcon, GlobeIcon } from '../graphics/graphics';
+import { useContext } from 'react';
+import { AppContext } from '../../context/provider';
 
 export default function Portfolio() {
-
+    const { pageContent } = useContext(AppContext);
+    const { portfolio } = pageContent;
+    console.log('portfolio', portfolio)
     return (
         <div className={styles.page}>
             <div className={styles.group}>
@@ -18,10 +22,10 @@ export default function Portfolio() {
                             </a>                            
                         </div>
                         <p>
-                            NFT rental protocol. Includes a Marketplace and a Smart Contract Wallet.
+                            {portfolio.entries[0].description[0]}
                         </p>
                         <p>
-                            Project by Venn.
+                            {portfolio.credit.selfVenn}
                         </p>
                         <div className={styles.links}>
                             <a>
@@ -51,11 +55,11 @@ export default function Portfolio() {
                     <div className={styles.entry}>
                         <div className={styles.nameContainer}>
                             <a>
-                                <h3 className={styles.name}>deforestation calculator</h3>
+                                <h3 className={styles.name}>{portfolio.entries[1].name}</h3>
                             </a>
                         </div>
-                        <p>Tool that estimates the economical impact of deforestation in the Amazon.</p>
-                        <p>Developed by Venn. Project by the <i>Conservation Strategy Fund</i>.</p>
+                        <p>{portfolio.entries[1].description}</p>
+                        <p>{portfolio.credit.clientVenn1}. <span style={{ textTransform: 'capitalize'}}>{pageContent.words.project}</span> {pageContent.grammar.do}<i> Conservation Strategy Fund</i>.</p>
                         <div className={styles.links}>
                             <a><div className={styles.icon}><GlobeIcon/></div></a>
                         </div>
@@ -74,10 +78,10 @@ export default function Portfolio() {
                         <div className={styles.nameContainer}>
                             {/* <div className={styles.icon}><GlobeIcon/></div> */}
                             <a>
-                                <h3 className={styles.name}>calculator hub</h3>
+                                <h3 className={styles.name}>{portfolio.entries[2].name}</h3>
                             </a>
                         </div>
-                        <p>Developed by Venn for the <i>Conservation Strategy Fund</i>.</p>
+                        <p>{portfolio.credit.clientVenn1} {pageContent.grammar.para} {pageContent.grammar.o}<i> Conservation Strategy Fund</i>.</p>
                         <div className={styles.links}>
                             <a><div className={styles.icon}><GlobeIcon/></div></a>
                         </div>
@@ -89,7 +93,7 @@ export default function Portfolio() {
                                 <h3 className={styles.name}>oga imobiliaria</h3>
                             </a>
                         </div>
-                        <p>Developed by Venn for <i>Oga Imobiliaria</i>.</p>
+                        <p>{portfolio.credit.clientVenn1} {pageContent.grammar.para} <i>Oga Imobiliaria</i>.</p>
                         <div className={styles.links}>
                             <a><div className={styles.icon}><GlobeIcon/></div></a>
                         </div>

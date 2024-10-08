@@ -1,10 +1,9 @@
 import styles from './dashboard-mobile.module.css';
 import { BackIcon, BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
-import { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../../context/provider';
-import { pageTitles, pageStyles, scrollToRef } from '../../../utils';
-import { pageIcon } from '../common';
-
+import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS, EN, PT } from '../../../context/provider';
+import { scrollToRef } from '../../../utils';
+import { pageTitles, pageStyles, pageIcon } from '../common';
 
 export default function DashboardMobile ({ pageRef }) {
     const { page, setPage } = useContext(AppContext);
@@ -129,8 +128,10 @@ export default function DashboardMobile ({ pageRef }) {
 }
 
 function PageMenuRow1 ({ page, onClick }) {
+    // const { portuguese } = useContext(AppContext);
+    // const language = useMemo(() => portuguese ? PT : EN, [portuguese]);
 
-    const title = pageTitles[`${page}`];
+    const title = pageTitles[EN][`${page}`];
     const { background, color } = pageStyles[`${page}`];
     const icon = pageIcon[`${page}`];
 
@@ -158,7 +159,7 @@ function PageMenuRow1 ({ page, onClick }) {
                 >
                     <h2
                     style={{ 
-                        width: '80%',
+                        width: '60%',
                         textTransform: 'uppercase',
                         textAlign: 'left',
                         textWrap: 'balance'

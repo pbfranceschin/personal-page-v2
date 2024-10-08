@@ -1,0 +1,196 @@
+{
+    "content": [
+        {
+            "id": "en",
+            "grammar": {
+                "o": "the",
+                "a": "the",
+                "do": "by the",
+                "da": "by the",
+                "por": "by",
+                "para": "for"
+            },
+            "words": {
+                "project": "project",
+                "about": "about",
+                "stage": "stage"                
+            },
+            "credit": {
+                "selfVenn": "Projeto by Venn.",
+                "selfSolo": "Solo Project.",
+                "clientVenn1": "Developed by Venn",
+                "clientVenn2": "Developed by Venn. Project by",
+                "clientSolo": "Developed solo for "
+            },
+            "dashboard": {
+                "about": "about pedro's work",
+                "business": "pedro's business ventures",
+                "portolio": "pedro's work portfolio",
+                "projects": "pedro's own projects"
+            },
+            "footnote": {
+                "background": "background art:",
+                "name": "La esfinge",
+                "author": "by David Gore"
+            },
+            "about": {
+                "paragraphs": [
+                    "Pedro Franceschin is a self taught web(3) full stack developer and smart contract engineer with particular expertise in EVM environments. Although proficient in web development, he is particularly interested in leveraging blockchain technology to enable the progressive decentralization of all things.",
+                    "The ecosystem of web applications that use blockchains as data layers is often called web3 (aside from it's more colloquial term, \"crypto\").",
+                    "Pedro has about 3 years experience in developing open source web3 applications, including all facets of the work, from smart contract engineering, to web development,  blockchain integration and even some web design, having won prizes in hackathons and grants from big web3 players.",
+                    "He believes this technology will bring forth a positive movement in society, eroding the current centralization of markets and enabling new kinds of governance to emerge, all with a strictly voluntary character, as a democracies should be. In the end, people should have more sovereignty over their lives and institutions should exist to serve the people, not the other way around.",
+                    "Pedro has an academic background in engineering (B.Sc) and Applied Economics (M.A). As a developer he is a member of Venn, a software studio focused on web/web3 solutions. He acts as full-stack dev, protocol/smart-contract engineer and sometimes web designer.",
+                    "Aside from his work as a developer, Pedro is also an entrepreneur. He is a co-founder at the aforementioned Venn studio. Their main project at the moment is a NFT rental solution, currently being called",
+                    "He has always had an entrepreneurial vein, having opened his first business at the young age of 23 in a non tech sector (namely food and beverages), before realizing his true calling was helping develop awesome technology. He also worked for Fundação Getúlio Vargas as an academic researcher/developer, focused on blockchain technology, after he graduated as a Master of Arts in Applied Economics in Universidade de São Paulo, having written his dissertation on Blockchain protocols."
+                ]
+            },
+            "business": {
+                "label": "Role:",
+                "venn": {
+                    "description": [
+                        "Software studio focused on innovative solutions to web and mobile apps, decentralized apps, smart contract protocols and other digital solutions. Consulting on application development, including blockchain and decentralized apps.",
+                        "Founded in 2024 after a year or so of collaboration between it's 3 founders, Pedro Franceschin, Bernardo Franceschin and Fernanda Duarte."
+                    ],
+                    "role": "Co-owner, engineer, full-stack developer."
+                }
+            },
+            "portfolio": {
+                "entries": [
+                    {
+                        "name": "venn protocol",
+                        "description": [
+                            "NFT rental protocol. Includes an on-chain Marketplace and a Smart Contract Wallet."
+                        ]
+                    },
+                    {
+                        "name": "deforestation calculator",
+                        "description": [
+                            "Tool that estimates the economical impact of deforestation in the Amazon."
+                        ],
+                        "client": "Conservation Stratgegy Fund"
+                    },
+                    {
+                        "name": "calculator hub",
+                        "client": "Conservation Stratgegy Fund"
+                    },
+                    {
+                        "name": "oga imobiliaria",
+                        "client": "OGA Imobiliária"
+                    }
+                ],
+                "credit": {
+                    "selfVenn": "Projeto by Venn.",
+                    "selfSolo": "Solo Project.",
+                    "clientVenn1": "Developed by Venn",
+                    "clientVenn2": "Developed by Venn. Project by",
+                    "clientSolo": "Developed solo for "
+                }
+            },
+            "projects": {
+                "descriptions": [
+                    "using Venn Smart Accounts and Venn Marketplace, users can rent NFT's without collateral in a completely safe and trustless manner. Venn Protocol leverages Account Abstraction and ERC-4337, in a innovative approach to NFT rental scolutions.",
+                    "protocol that leverages blockchain to enable automatic and recursive funding distribution based on a cross-reference tree. The main cases being studied right now are ‘open source software’ (possibly including package manager and github integration), publishing (scientific and otherwise) and music streaming. The core concept is that instances of work that receive funding can share it, in a programmatic fashion, with other works that had relevant contribution."
+                ],
+                "stages": {
+                    "early": "early development"                    
+                }
+            }
+        },
+        {
+            "id": "pt",
+            "grammar": {
+                "o": "o",
+                "a": "a",
+                "do": "do",
+                "da": "da",
+                "para": "para"
+            },
+            "words": {
+                "project": "projeto",
+                "about": "sobre",
+                "stage": "estágio"                
+            },
+            "credit": {
+                "selfVenn": "Projeto do Venn.",
+                "selfSolo": "Projeto solo.",
+                "clientVenn1": "Desenvolvido por Venn",
+                "clientVenn2": "Desenvolvido por Venn. Project do ",
+                "clientSolo": "Desenvolvido solo para "
+            },
+            "dashboard": {
+                "about": "about pedro's work",
+                "business": "pedro's business ventures",
+                "portolio": "pedro's work portfolio",
+                "projects": "pedro's own projects"
+            },
+            "footnote": {
+                "background": "arte de fundo:",
+                "name": "La esfinge",
+                "author": "de David Gore"
+            },
+            "about": {
+                "paragraphs": [
+                    "Pedro Franceschin é um desenvolvedor web(3) full stack e engenheiro de contratos inteligentes autodidata, com expertise particular em ambientes EVM. Embora proficiente em desenvolvimento web, ele é particularmente interessado na utilização da tecnologia blockchain para a descentralização progressiva de todas as coisas.",
+                    "O ecossistema de aplicações web que usam blockchains como camadas de dados é frequentemente chamado de web3 (além do seu termo mais coloquial, \"cripto\").",
+                    "Pedro tem cerca de 3 anos de experiência no desenvolvimento de aplicações web3 de código aberto, incluindo todas as facetas do trabalho, desde engenharia de contratos inteligentes, desenvolvimento web, integração blockchain e até mesmo um pouco de web design, tendo ganhado prêmios em hackathons e bolsas de grandes players da web3.",
+                    "Ele acredita que esta tecnologia trará um movimento positivo na sociedade, erodindo a atual centralização dos mercados e permitindo o surgimento de novos tipos de governança, todos com um caráter estritamente voluntário, como as democracias deveriam ser. No final, as pessoas deveriam ter mais soberania sobre suas vidas e as instituições deveriam existir para servir as pessoas, não o contrário.",
+                    "Pedro tem formação acadêmica em engenharia (B.Sc) e Economia Aplicada (M.A). Como desenvolvedor, ele é membro da Venn, um estúdio de software focado em soluções web/web3. Ele atua como desenvolvedor full-stack, engenheiro de protocolos/contratos inteligentes e às vezes web designer.",
+                    "Além de seu trabalho como desenvolvedor, Pedro também é um empreendedor. Ele é co-fundador do já mencionado estúdio Venn. O principal projeto deles no momento é uma solução de aluguel de NFTs, atualmente chamada",
+                    "Ele sempre teve uma veia empreendedora, tendo aberto seu primeiro negócio com 23 anos em um setor não tecnológico (especificamente bares e restaurantes), antes de descobrir sua verdadeira vocação: ajudar a desenvolver tecnologias inovadoras. Ele também trabalhou por um tempo para a Fundação Getúlio Vargas como pesquisador/desenvolvedor, focado em tecnologia blockchain, depois de se formar como Mestre em Economia Aplicada na Universidade de São Paulo, tendo escrito sua dissertação sobre protocolos Blockchain."
+                ]
+            },
+            "business": {
+                "label": "Cargo:",
+                "venn": {
+                    "description": [
+                        "Estúdio de software focado em soluções inovadoras em web e mobile apps, apps decentralizados (dapps), protocolos de contratos inteligentes, entre outras. Consultoria em desenvolvimento de aplicações, incluindo blockchain e dapps.",
+                        "Fundado em 2024 depois de cerca de 2 anos de colaboração entre seus três fundadores, Pedro Franceschin, Bernardo Franceschin e Fernanda Duarte."
+                    ],
+                    "role": "sócio, engenheiro, desenvolvedor full-stack."
+                }
+            },
+            "portfolio": {
+                "entries": [
+                    {
+                        "name": "venn protocol",
+                        "description": [
+                            "Protocolo de aluguel de NFT. Inclui um Marketplace on-chain e uma Smart Contract Wallet.",
+                            "Projeto do Venn."
+                        ]
+                    },
+                    {
+                        "name": "Calculadora do desmatamento",
+                        "description": [
+                            "Ferramenta que estima o impacto econômico de desmatamentos na Amazônia."
+                        ],
+                        "client": "Conservation Stratgegy Fund"
+                    },
+                    {
+                        "name": "hub das calculadoras",
+                        "client": "Conservation Stratgegy Fund"
+                    },
+                    {
+                        "name": "oga imobiliaria",
+                        "client": "OGA Imobiliária"
+                    }
+                ],
+                "credit": {
+                    "selfVenn": "Projeto do Venn.",
+                    "selfSolo": "Projeto solo.",
+                    "clientVenn1": "Desenvolvido por Venn",
+                    "clientVenn2": "Desenvolvido por Venn. Project do ",
+                    "clientSolo": "Desenvolvido solo para "
+                }
+            },
+            "projects": {
+                "descriptions": [
+                    "usando Venn Smart Accounts e o Venn Marketplace, usuários podem alugar NFT's, sem necessidade de usar ativos como colateral, de uma forma completamente segura e sem nenhuma hipótese de confiança. Venn Protocol usa o conceito de Account Abstraction e o padrão ERC-4337 para oferecer um abordagem completamente inovadora para aluguéis de NFT.",
+                    "protocolo que move a tecnologia blockchain para permitir uma distribuição de funding automática e recursiva baseada numa árvore de referência cruzada. Os principais casos de uso sendo estudados no momento são 'softwares de código aberto (possivelmente incluindo integrações com package managers e github), publicação de artigos (científicos e não-científicos) e streaming de música. O conceito chave é que trabalhos que recebem funding podem compartilhá-lo, de forma programática, com outros trabalhos que ofereceram contribuições relevantes"
+                ],
+                "stages": {
+                    "early": "early development"                    
+                }
+            }
+        }
+    ]
+}

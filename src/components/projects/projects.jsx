@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { GitHubIcon, GlobeIcon } from '../graphics/graphics';
 import styles from './projects.module.css';
+import { AppContext } from '../../context/provider';
 
 export default function Projects() {
-
+    const { pageContent } = useContext(AppContext);
+    const { projects } = pageContent;
     return (
         <div className={styles.page}>
             <div className={styles.group}>
@@ -12,11 +15,11 @@ export default function Projects() {
                 <div className={styles.line}></div>
                 <div className={styles.textbox}>
                     <p>
-                    <span className={styles.textlabel}>About:</span> using Venn Smart Accounts and Venn Marketplace, users can rent NFT's without collateral in a completely safe and trustless manner. Venn Protocol leverages Account Abstraction and ERC-4337, in a innovative approach to NFT rental scolutions.
-                    <br/><br/>
-                    <span className={styles.textlabel}>Stage:</span> MVP.
-                    <br/><br/>
-                    Project by Venn.
+                        <span className={styles.textlabel} style={{ textTransform: 'capitalize'}}>{pageContent.words.about}:</span> {projects.descriptions[0]}
+                        <br/><br/>
+                        <span className={styles.textlabel} style={{ textTransform: 'capitalize'}}>{pageContent.words.stage}:</span> MVP.
+                        <br/><br/>
+                        {pageContent.credit.selfVenn}
                     </p>
                     <div className={styles.links}>
                     <a>
@@ -36,11 +39,11 @@ export default function Projects() {
                     <div className={styles.line}></div>
                     <div className={styles.textbox}>
                         <p>
-                        <span className={styles.textlabel}>About:</span> protocol that leverages blockchain to enable automatic and recursive funding distribution based on a cross-reference tree. The main cases being studied right now are ‘open source software’ (possibly including package manager and github integration), publishing (scientific and otherwise) and music streaming. The core concept is that instances of work that receive funding can share the funding, in a programmatic fashion, with other works that had relevant contribution.
-                        <br/><br/>
-                        <span className={styles.textlabel}>Stage:</span> early development.
-                        <br/><br/>
-                        Project by Venn.
+                            <span className={styles.textlabel} style={{ textTransform: 'capitalize'}}>{pageContent.words.about}:</span> {projects.descriptions[1]}
+                            <br/><br/>
+                            <span className={styles.textlabel} style={{ textTransform: 'capitalize'}}>{pageContent.words.stage}:</span> {projects.stages.early}.
+                            <br/><br/>
+                            {pageContent.credit.selfVenn}
                         </p>
                         {/* <div className={styles.links}>
                         <a>
