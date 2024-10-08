@@ -1,10 +1,18 @@
+import { openUrl } from "../../utils";
 import { CVIcon, GlobeIconLarge, MailIconLarge } from "../graphics/graphics";
 
 export const pageIcon = {
     "ABOUT": <CVIcon/>,
     "BUSINESS": <GlobeIconLarge/>,
     "PORTFOLIO": <MailIconLarge/>,
-    "PROJECTS": <MailIconLarge/>
+    "PROJECTS": <GlobeIconLarge/>
+}
+
+export const pageHandler = {
+    "ABOUT": () => {},
+    "BUSINESS": () => openUrl("https://australopitech.xyz"),
+    "PORTFOLIO": () => openUrl("https://venn-protocol.vercel.app/"),
+    "PROJECTS": () => openUrl("https://venn-protocol.vercel.app/"),
 }
 
 

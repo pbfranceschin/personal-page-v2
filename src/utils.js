@@ -7,6 +7,12 @@ export const scrollToRef = (ref) => {
     }
 }
 
+export const openUrl = (url) => {
+    if(url) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    }
+}
+
 
 export const pageTitles = {
     "ABOUT": "about pedro's work",
