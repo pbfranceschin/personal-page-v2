@@ -28,7 +28,7 @@ main::before {
   background-repeat: no-repeat;
   z-index: -1;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   main::before {
     background-image: url('/img/desktop-backgroud.png');
     background-size: 1440px 1344px;

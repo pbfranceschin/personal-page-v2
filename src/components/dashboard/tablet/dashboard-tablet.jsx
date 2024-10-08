@@ -1,6 +1,6 @@
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styles from './dashboard-tablet.module.css';
-import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS } from '../../../context/provider';
+import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS, EN } from '../../../context/provider';
 import { pageTitles, pageStyles, pageIcon } from '../common';
 import { BackIcon, BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
 import { scrollToRef } from '../../../utils';
@@ -192,7 +192,7 @@ const ResourceButton = ({ page, onClick }) => {
 }
 
 const TitleButton = ({ page, onClick }) => {
-    const title = pageTitles[`${page}`];
+    const title = pageTitles[EN][`${page}`];
     const { background, color } = pageStyles[`${page}`];
     const style={
         background: background.primary,

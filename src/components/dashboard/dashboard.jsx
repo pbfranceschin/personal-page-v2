@@ -7,7 +7,7 @@ import DashboardTablet from "./tablet/dashboard-tablet";
 
 const BREAKPOINTS = {
   mobile: 744,
-  tablet: 1024
+  tablet: 1025
 };
 
 export default function Dashboard({ pageRef }) {

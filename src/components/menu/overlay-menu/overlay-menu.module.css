@@ -41,7 +41,7 @@
     opacity: 1;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .overlay {
         background-color: rgba(0, 0, 0, 0.8);
         align-items: start;
@@ -107,7 +107,7 @@
     margin: 8px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .footnote {
         color: #ffffff;
     }

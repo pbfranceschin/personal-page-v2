@@ -32,7 +32,7 @@
     height: 468px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .dashboardContainer {
         margin-top: 64px;
     }
@@ -89,7 +89,7 @@
     align-items: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .option {
         width: 276px;
         height: 226px;
@@ -225,7 +225,7 @@
     transform: translateY(0);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .option.selected {
         width: 180px;
         height: 100%;
@@ -250,7 +250,7 @@
     height: 40px;
 }
 
-@media(min-width: 1024px) {
+@media(min-width: 1025px) {
     .backIcon {
         width: 48px;
         height: 48px;
