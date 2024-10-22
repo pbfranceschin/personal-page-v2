@@ -23,13 +23,13 @@ export default function Portfolio() {
                             <div className={styles.links}>
                             <a>
                                 <div className={styles.icon}
-                                // style={{ padding: '2px'}}
+                                style={{ padding: '1px'}}
                                 >
                                     <GitHubIcon/>                            
                                 </div>
                             </a>
                             <a>
-                                <div className={styles.icon}>
+                                <div className={`${styles.icon} ${styles.iconRounded}`}>
                                     <ChainIcon/>
                                 </div>
                             </a>                                
@@ -72,13 +72,13 @@ export default function Portfolio() {
                                 <h3 className={styles.name}>{portfolio.entries[1].name}</h3>
                             </a>
                             <div className={styles.links}>
-                                <a><div className={styles.icon}><ChainIcon/></div></a>
+                                <a><div className={`${styles.icon} ${styles.iconRounded}`}><ChainIcon/></div></a>
                             </div>
                         </div>
                         <p>{portfolio.entries[1].description}</p>
                         <p>{portfolio.credit.clientVenn1}. <span style={{ textTransform: 'capitalize'}}>{pageContent.words.project}</span> {pageContent.grammar.do}<i> Conservation Strategy Fund</i>.</p>
                         {/* <div className={styles.links}>
-                            <a><div className={styles.icon}><ChainIcon/></div></a>
+                            <a><div className={`${styles.icon} ${styles.iconRounded}`}><ChainIcon/></div></a>
                         </div> */}
                     </div>                    
                 </div>
@@ -93,24 +93,24 @@ export default function Portfolio() {
                 <div className={styles.textbox}>
                     <div className={styles.entry}>
                         <div className={styles.nameContainer}>
-                            {/* <div className={styles.icon}><ChainIcon/></div> */}
+                            {/* <div className={`${styles.icon} ${styles.iconRounded}`}><ChainIcon/></div> */}
                             <a>
                                 <h3 className={styles.name}>{portfolio.entries[2].name}</h3>
                             </a>
                             <div className={styles.links}>
-                                <a><div className={styles.icon}><ChainIcon/></div></a>
+                                <a><div className={`${styles.icon} ${styles.iconRounded}`}><ChainIcon/></div></a>
                             </div>
                         </div>
                         <p>{portfolio.credit.clientVenn1} {pageContent.grammar.para} {pageContent.grammar.o}<i> Conservation Strategy Fund</i>.</p>                        
                     </div>
                     <div className={styles.entry}>
                         <div className={styles.nameContainer}>
-                            {/* <div className={styles.icon}><ChainIcon/></div> */}
+                            {/* <div className={`${styles.icon} ${styles.iconRounded}`}><ChainIcon/></div> */}
                             <a>
                                 <h3 className={styles.name}>oga imobiliaria</h3>
                             </a>
                             <div className={styles.links}>
-                                <a><div className={styles.icon}><ChainIcon/></div></a>
+                                <a><div className={`${styles.icon} ${styles.iconRounded}`}><ChainIcon/></div></a>
                             </div>
                         </div>
                         <p>{portfolio.credit.clientVenn1} {pageContent.grammar.para} <i>Oga Imobiliaria</i>.</p>                        

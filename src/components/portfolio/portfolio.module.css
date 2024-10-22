@@ -69,7 +69,15 @@
     height: 32px;
     margin-inline: 6px;
     margin-bottom: 4px;
-    padding: 2px;
+}
+.iconRounded {
+    padding: 7px;
+    border-radius: 50%;
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media(min-width: 744px) {
@@ -85,8 +93,8 @@
     }
 
     .icon {
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
     }
 }
 
