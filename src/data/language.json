@@ -55,20 +55,24 @@
                 }
             },
             "portfolio": {
-                "entries": [
+                "dapps": [
                     {
                         "name": "venn protocol",
                         "description": [
                             "NFT rental protocol. Includes an on-chain Marketplace and a Smart Contract Wallet."
                         ]
-                    },
+                    }
+                ],
+                "apps": [
                     {
                         "name": "deforestation calculator",
                         "description": [
                             "Tool that estimates the economical impact of deforestation in the Amazon."
                         ],
                         "client": "Conservation Stratgegy Fund"
-                    },
+                    }
+                ],
+                "pages": [
                     {
                         "name": "calculator hub",
                         "client": "Conservation Stratgegy Fund"
@@ -83,7 +87,7 @@
                     "selfSolo": "Solo Project.",
                     "clientVenn1": "Developed by Venn",
                     "clientVenn2": "Developed by Venn. Project by",
-                    "clientSolo": "Developed solo for "
+                    "clientSolo": "Developed solo"
                 }
             },
             "projects": {
@@ -150,21 +154,25 @@
                 }
             },
             "portfolio": {
-                "entries": [
+                "dapps": [
                     {
                         "name": "venn protocol",
                         "description": [
                             "Protocolo de aluguel de NFT. Inclui um Marketplace on-chain e uma Smart Contract Wallet.",
                             "Projeto do Venn."
                         ]
-                    },
+                    }
+                ],
+                "apps": [
                     {
                         "name": "Calculadora do desmatamento",
                         "description": [
                             "Ferramenta que estima o impacto econômico de desmatamentos na Amazônia."
                         ],
                         "client": "Conservation Stratgegy Fund"
-                    },
+                    }
+                ],
+                "pages": [
                     {
                         "name": "hub das calculadoras",
                         "client": "Conservation Stratgegy Fund"
@@ -179,7 +187,7 @@
                     "selfSolo": "Projeto solo.",
                     "clientVenn1": "Desenvolvido por Venn",
                     "clientVenn2": "Desenvolvido por Venn. Project do ",
-                    "clientSolo": "Desenvolvido solo para "
+                    "clientSolo": "Desenvolvido solo"
                 }
             },
             "projects": {
