@@ -70,3 +70,9 @@ main::before {
   width: 100%;
   overflow: hidden;
 }
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

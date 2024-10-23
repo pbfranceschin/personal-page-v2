@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import './App.css'
 import Menu from './components/menu/menu';
 import Dashboard from './components/dashboard/dashboard';
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-    <main>
+    <main className='rubik'>
       <div id='nav' className='nav' ref={navRef}>
         <Menu navRef={navRef} pageRef={pageRef}/>
         <div className='top'>

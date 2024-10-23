@@ -80,6 +80,7 @@ button {
   padding: 0;
   border: none;
   cursor: pointer;
+  font-family: inherit;
 }
 
 body {
