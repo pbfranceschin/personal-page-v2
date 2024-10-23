@@ -3,6 +3,27 @@
     height: 56px;
 }
 
+.line {
+    width: 100%;
+    height: 2px;
+    transition: all 250ms ease-in-out;
+    background-color: var(--bg-color);
+}
+.vert {
+    transform: rotate(90deg);
+}
+.circularIconWrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 6px;
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media(min-width: 744px) {
     .iconLarge {
         width: 64px;

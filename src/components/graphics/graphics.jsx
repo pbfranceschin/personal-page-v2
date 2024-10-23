@@ -264,3 +264,24 @@ export const ChainIcon = () => {
         </svg>
     )
 }
+
+export const CollapseIcon = ({ isOpen }) => {
+    
+    return (
+        <div className={styles.circularIconWrapper}>
+            <div style={{
+                width: '100%',
+                height:'100%',
+                position: 'relative',
+                display: "flex",
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                <div className={styles.line}></div>
+                <div className={`${styles.line} ${!isOpen ? styles.vert : '' }`}
+                style={{ position: 'absolute'}}
+                ></div>
+            </div>
+        </div>
+    )
+}
