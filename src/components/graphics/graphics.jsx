@@ -1,6 +1,22 @@
 import React from "react";
 import styles from './graphics.module.css';
 
+export function VennLogo () {
+    return (
+        <svg width="100%" height="100%" viewBox="0 0 120 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_2506_24)">
+            <path fillRule="evenodd" clipRule="evenodd" d="M63.5294 5.66607C50.8701 12.9892 42.3529 26.6762 42.3529 42.3529C42.3529 58.0296 50.8701 71.7167 63.5294 79.0398C57.2998 82.6433 50.0673 84.7059 42.3529 84.7059C18.962 84.7059 0 65.744 0 42.3529C0 18.962 18.962 0 42.3529 0C50.0673 0 57.2998 2.06256 63.5294 5.66607Z" fill="currentColor" fillOpacity="0.87"/>
+            <path d="M85.7186 75.3621C103.949 75.3621 118.728 60.5832 118.728 42.3525C118.728 24.1218 103.949 9.34283 85.7186 9.34283C67.4879 9.34283 52.709 24.1218 52.709 42.3525C52.709 60.5832 67.4879 75.3621 85.7186 75.3621Z" fill="currentColor" fillOpacity="0.87"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2506_24">
+            <rect width="120" height="84.7059" fill="currentColor"/>
+            </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
 export const InfoIcon = () => {
     return (
         <div className={styles.iconLarge}>

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styles from './business.module.css';
 import { AppContext } from '../../context/provider';
+import { VennLogo } from '../graphics/graphics';
 
 
 export default function Business() {
@@ -10,13 +11,21 @@ export default function Business() {
     return (
         <div className={styles.businessContainer}>
             <div className={styles.business}>
-                <img 
-                    src='/img/venn-color.svg' 
-                    alt='Venn Studio'
-                    className={styles.logo}
-                />
-                <h2 className={styles.audiowideRegular}>Venn Studio</h2>
+                <a className={styles.logoContainer}>
+                    <div className={styles.logo}>
+                        <VennLogo/>
+                    </div>
+                    <div className={styles.hoverLogoContainer}>
+                        {/* <div style={{ width: '100%' }}>
+                            <VennLogo/>
+                        </div> */}
+                        <h2 className={`montserratExtraBold`}>VENN </h2>
+                        <h2 className={`montserratExtraBold`}>STUDIO </h2>
+
+                    </div>
+                </a>
                 <p>
+                    <span style={{ fontWeight: '700', fontStyle: 'italic'}}>Venn </span>
                     {business.venn.description.map((item) => {
                         return (
                             <>
@@ -25,10 +34,10 @@ export default function Business() {
                             </>
                         )
                     })}
-                    <span style={{ opacity: 0.6}}>
+                    {/* <span style={{ opacity: 0.6}}>
                         {business.label}{' '}
                     </span>
-                    {business.venn.role}
+                    {business.venn.role} */}
                 </p>
             </div>
         </div>
