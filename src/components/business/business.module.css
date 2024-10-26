@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     padding: var(--textBoxPadding);
     background-color: var(--bg-color);
 }
@@ -37,6 +37,7 @@
     justify-content: space-between;
     gap: 4px;
     color: inherit;
+    font-size: 32px;
 }
 
 /* .outlinedText {
@@ -51,7 +52,7 @@
 
 .logoContainer {
     position: relative;
-    width: 50%;
+    width: 55%;
     color: var(--bg-color);
 }
 .logoContainer:hover {
@@ -63,9 +64,21 @@
     color: var(--bg-inverted);
 }
 
+.links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 500;
+    margin-top: -1rem;
+    padding: 0 0.5rem;
+}
+
 @media (min-width: 1025px) {
     .businessContainer {
         margin-top: 80px;
+    }
+    .business {
+        gap: 3rem
     }
     .logoContainer {
         color: transparent;
