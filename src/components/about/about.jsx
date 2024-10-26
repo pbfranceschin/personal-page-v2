@@ -13,8 +13,12 @@ export default function About () {
                 <div className={styles.textBoxContainer} style={{ marginTop: 0 }}>
                     <div className={styles.line}></div>
                     <div className={styles.textBox}>
-                    <p>
-                        {about.paragraphs[0]}                       
+                    <p style={{ fontWeight: '500', fontStyle: 'italic'}}>
+                        {about.intro[0]}
+                        <br/><br/>
+                        {about.intro[1]}
+                        <br/><br/>
+                        {about.intro[2]}
                     </p>
                 </div>
                 </div>
@@ -23,27 +27,39 @@ export default function About () {
                 <div className={styles.textBoxContainer}>
                     <div className={styles.textBox}>
                         <p>                            
+                            {about.paragraphs[0]}
+                            <br/>
+                            <br/>
                             {about.paragraphs[1]}
                             <br/>
                             <br/>
                             {about.paragraphs[2]}
-                            <br/>
-                            <br/>
-                            {about.paragraphs[3]}
                         </p>
                     </div>
                 </div>
                 <div className={styles.textBoxContainer}>
                     <div className={styles.textBox}>
                         <p>
+                            {about.paragraphs[3]}
+                            <br/>
+                            <br/>
                             {about.paragraphs[4]}
                             <br/>
                             <br/>
                             {about.paragraphs[5]}
-                            <i> Venn Protocol</i>.
-                            <br/>
-                            <br/>
+                        </p>                                                
+                    </div>
+                </div>
+                <div className={styles.textBoxContainer}>
+                    <div className={styles.textBox}>
+                        <p>
                             {about.paragraphs[6]}
+                            <br/>
+                            <br/>
+                            {about.paragraphs[7]}
+                            <br/>
+                            <br/>
+                            {about.paragraphs[8]}
                         </p>                                                
                     </div>
                     <div className={styles.line}></div>
