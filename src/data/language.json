@@ -34,21 +34,28 @@
                 "author": "by David Gore"
             },
             "about": {
+                "intro":[
+                    "This a dev space. That means you’ll find technology, innovative ideas and off course awesome implementations. That’s the build part.",
+                    "You’ll also find out about disruption, decentralization and radical perspectives. That’s the destroy part. We build disruptive tech in order to destroy power structures.",
+                    "If you are at all interested in that, here is  a brief introduction."
+                ],
                 "paragraphs": [
-                    "Pedro Franceschin is a self taught web(3) full stack developer and smart contract engineer with particular expertise in EVM environments. Although proficient in web development, he is particularly interested in leveraging blockchain technology to enable the progressive decentralization of all things.",
-                    "The ecosystem of web applications that use blockchains as data layers is often called web3 (aside from it's more colloquial term, \"crypto\").",
-                    "Pedro has about 3 years experience in developing open source web3 applications, including all facets of the work, from smart contract engineering, to web development,  blockchain integration and even some web design, having won prizes in hackathons and grants from big web3 players.",
-                    "He believes this technology will bring forth a positive movement in society, eroding the current centralization of markets and enabling new kinds of governance to emerge, all with a strictly voluntary character, as a democracies should be. In the end, people should have more sovereignty over their lives and institutions should exist to serve the people, not the other way around.",
-                    "Pedro has an academic background in engineering (B.Sc) and Applied Economics (M.A). As a developer he is a member of Venn, a software studio focused on web/web3 solutions. He acts as full-stack dev, protocol/smart-contract engineer and sometimes web designer.",
-                    "Aside from his work as a developer, Pedro is also an entrepreneur. He is a co-founder at the aforementioned Venn studio. Their main project at the moment is a NFT rental solution, currently being called",
-                    "He has always had an entrepreneurial vein, having opened his first business at the young age of 23 in a non tech sector (namely food and beverages), before realizing his true calling was helping develop awesome technology. He also worked for Fundação Getúlio Vargas as an academic researcher/developer, focused on blockchain technology, after he graduated as a Master of Arts in Applied Economics in Universidade de São Paulo, having written his dissertation on Blockchain protocols."
+                    "I am a self taught web(3) full stack developer and smart contract engineer with particular expertise in EVM environments. Although i am proficient in web development, decentralized networks are what interest me the most. Why? They enable the progressive erosion of all artificial power structures that permeate our society today.",
+                    "Among these type of networks, one kind stands out nowadays. The one base on a tech called Blockchain. The ecosystem of web applications that use blockchains a data layers is often called web3 or ‘crypto’.",
+                    "I have about 3 years experience in developing open source web3 applications, including all facets of the work, from smart contract engineering to web integration having won prizes in hackathons and grants from big web3 players.",
+                    "During those 3 years, having dived deep into the space and learned a bit about the nature of this technology, i had a glimpse of the potential that the widespread use of applications built on top of it can have. And not even myself or the top dogs in this field can grasp what awaits us on the other side of this transition.",
+                    "The clear part is that decentralized networks, not only blockchain, but all the truly decentralized ones, can bring about a fundamentally voluntary society. One where coercion is merely punitive, and no peaceful person will, by norm, be forced to associate with any corrupt organization. People will be sovereign and institutions will exist to serve the people, not the other way around.",
+                    "Today the power structure is realizing it’s own fragility in face of such a powerful entity. Or should i say entities.  That is why we see movements of censorship, false indictments, despotic imprisonments. But the most beautiful thing is, these entities are all independent of one another, they have no central coordination, no authority over anyone. But yet, together they can be more powerful than all the governments combined. They can truly be what democracy promised to be but never delivered. Technology is our way out.",
+                    "Aside from that, i love developing. From vanilla web to web 3, smart contracts, AI integrations, decentalized compute, decentralized storage, decentralized runtime, anything cool that hasn’t been done. If it ruins some legacy institution along the way, even better. I have fun even doing some web design nowadays. YOLO.",
+                    "I have an academic background in engineering (B.Sc) and Applied Economics (M.A). As a developer, i am a member of Venn Studio, where i act as full-stack  dev, smart-contract engineer, protocol designer and sometimes web designer, aside from being one of the owners.",
+                    "If you wanna learn more about these kind of stuff you can download the ol’ boring CV in the button below. I can freelance if it’s really worth my time. And i am not talking about the money. If you read all the way to here, reach out, let’s chat."
                 ]
             },
             "business": {
                 "label": "Role:",
                 "venn": {
                     "description": [
-                        "is as software studio focused on developing innovative solutions on web, mobile, decentralized apps, as well as smart contract protocols among others. They also specialize in integrating AI and Blockchain to existing applications.",
+                        "is as software studio focused on developing innovative solutions on web, mobile, decentralized apps, smart contract protocols, AI and Blockchain integrations.",
                         "Founded in 2024 after a year or so of collaboration between it's 3 founders, Pedro Franceschin, Bernardo Franceschin and Fernanda Duarte."
                     ],
                     "role": "Co-owner, engineer, full-stack developer."
@@ -147,7 +154,7 @@
                 "label": "Cargo:",
                 "venn": {
                     "description": [
-                        "é um estúdio de software que desenvolve soluções inovadoras em web, mobile, apps decentralizados (dapps), protocolos de contratos inteligentes, entre outros. Também têm expertise na integração de AI e Blockchain a aplições existentes.",
+                        "é um estúdio de software especializado em desenvolver soluções inovadoras em web, mobile, apps decentralizados (dapps), protocolos de contratos inteligentes, integração de AI e Blockchain.",
                         "Fundado em 2024 depois de cerca de 2 anos de colaboração entre seus três fundadores, Pedro Franceschin, Bernardo Franceschin e Fernanda Duarte."
                     ],
                     "role": "sócio, engenheiro, desenvolvedor full-stack."
