@@ -1,5 +1,5 @@
 import { useCallback, useContext } from 'react';
-import { GitHubIcon, LinkedInIcon, MailIcon, MediumIcon, MoonIcon, SunIcon, VennLogoMono, XIcon } from '../graphics/graphics';
+import { GitHubIcon, LinkedInIcon, MailIcon, MediumIcon, MoonIcon, SunIcon, VennLogo, VennLogoMono, XIcon } from '../graphics/graphics';
 import styles from './menu.module.css';
 import { AppContext } from '../../context/provider';
 
@@ -68,7 +68,7 @@ export const Work = () => {
     return (
         <div className={styles.workContainer}>
             <a className={styles.bigIcon}><MailIcon /></a>
-            <a className={styles.bigIcon}><VennLogoMono /></a>
+            <a className={styles.bigIcon}><VennLogo /></a>
         </div>
     )
 }
