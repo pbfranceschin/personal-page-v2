@@ -191,7 +191,7 @@ function WebPagesGroup ({ isOpen, handleEntryClick }) {
                             <OGALogo/>
                         </div>
                         <img
-                        src='/img/csf/deforestation-home.png'           
+                        src='/img/oga/oga_home.png'           
                         alt='OGA homepage'
                         style={{ width: '100%', height: 'auto' }}
                         />
