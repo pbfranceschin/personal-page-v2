@@ -39,10 +39,10 @@ export default function Business() {
                     </span>
                     {business.venn.role} */}
                 </p>
-                <div className={styles.links}>
-                    <a>Website</a>
-                    <a>X</a>
-                    <a>Github</a>
+                <div className={styles.linksContainer}>
+                    <a className={styles.links}>Website</a>
+                    <a className={styles.links}>X</a>
+                    <a className={styles.links}>Github</a>
                 </div>
             </div>
         </div>

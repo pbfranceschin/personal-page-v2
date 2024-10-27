@@ -64,13 +64,45 @@
     color: var(--bg-inverted);
 }
 
-.links {
+.linksContainer {
     display: flex;
     width: 100%;
     justify-content: space-between;
     font-weight: 500;
     margin-top: -1rem;
     padding: 0 0.5rem;
+}
+.links {
+    font-weight: 500;
+    font-size: 1.125rem;
+    position: relative;
+}
+
+.links::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+  
+.links:hover::after {
+    width: 100%;
+}
+
+@media(max-width:1025px) {
+    .links::after {
+        width: 100%;
+    }
+}
+
+@media(min-width: 744px) {
+    .links {
+        font-size: 1.25rem;
+    }
 }
 
 @media (min-width: 1025px) {
