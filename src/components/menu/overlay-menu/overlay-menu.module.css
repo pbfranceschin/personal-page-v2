@@ -105,6 +105,7 @@
 .footnote {
     opacity: 0.6;
     margin: 8px;
+    text-align: center;
 }
 
 @media (min-width: 1025px) {

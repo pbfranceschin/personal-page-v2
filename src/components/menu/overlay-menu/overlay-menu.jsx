@@ -51,8 +51,14 @@ function Overlay ({ animationClass, handleClickOverlayBackdrop }) {
                 left: 0,
                 right:0,
                 margin: 'auto',
-                width: 'fit-content'
+                width: 'fit-content',
+                display:'flex',
+                flexDirection: 'column',
+                justifyContent: 'center'
             }}>
+                <span className={styles.footnote}>
+                    stack: React + Vite (no js libs were used)
+                </span>
                 <span className={styles.footnote}>
                     background art: <i>La Esfinge</i>, by David Gore.
                 </span>
