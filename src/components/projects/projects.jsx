@@ -21,14 +21,16 @@ export default function Projects() {
                         <br/><br/>
                         {pageContent.credit.selfVenn}
                     </p>
-                    <div className={styles.links}>
-                    <a>
-                        <div className={styles.icon} style={{ padding: '2px'}}><GitHubIcon/></div>
-                    </a>
-                    <a>
-                        <div className={styles.icon}><GlobeIcon/></div>
-                    </a>
-                </div>
+                    <div className={styles.linksContainer}>
+                        <div className={styles.linksWrapper}>
+                            <a className={styles.links}>
+                                Github
+                            </a>
+                            <a className={styles.links}>
+                                Website
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
