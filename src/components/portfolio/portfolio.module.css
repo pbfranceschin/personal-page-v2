@@ -27,7 +27,7 @@
 }
 .textbox {
     width: 100%;
-    padding: 32px 0;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -45,16 +45,35 @@
     cursor: pointer;
 }
 .entryInfo {
-    padding: 0 32px;
+    /* padding: 0 32px; */
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* gap: 8px; */
+    gap: 1rem;
+    position: relative;
+}
+.overlaylogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    transition: opacity 150ms ease-out;
+    cursor: pointer;
+}
+.overlaylogo:hover {
+    opacity: 0.15;
 }
 
-.venn {
+.entry {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    gap: 1rem; 
 }
 
 .nameContainer {
@@ -63,22 +82,45 @@
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    text-transform: uppercase
 }
 .name {
     margin-inline: 2px;
     line-height: 1;
     flex: 1;
+    text-transform: uppercase
 }
-.name:hover {
-    text-decoration: underline;
-}
-.links {
+.linksWrapper {
     display: flex;
     /* width: 100%; */
     /* justify-content: end; */
-    gap: 8px;
+    gap: 3rem;
 }
+.links {
+    font-weight: 500;
+    position: relative;
+}
+
+.links::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+  
+.links:hover::after {
+    width: 100%;
+}
+
+@media(max-width:1025px) {
+    .links::after {
+        width: 100%;
+    }
+}
+
 
 .icon {
     width: 32px;
@@ -101,16 +143,20 @@
         gap: 64px;
     }
     .textbox {
-        padding: 40px 0;
+        padding: 40px;
         gap: 40px;
     }
-    .entry {
+    /* .entry {
         gap: 12px;
-    }
+    } */
 
     .icon {
         width: 36px;
         height: 36px;
+    }
+
+    .links {
+        font-size: 1.125rem;
     }
 }
 
@@ -119,12 +165,12 @@
         gap: 80px;
     }
     .textbox {
-        padding: 48px 0;
+        padding: 48px;
         gap: 48px;
     }
-    .entry {
+    /* .entry {
         gap: 16px;
-    }
+    } */
     .icon {
         width: 36px;
         height: 36px;
