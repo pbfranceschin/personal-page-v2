@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styles from './about.module.css';
 import { AppContext } from '../../context/provider';
+import { CVIcon } from '../graphics/graphics';
 
 export default function About () {
     const { pageContent } = useContext(AppContext);
@@ -60,11 +61,39 @@ export default function About () {
                             <br/>
                             <br/>
                             {about.paragraphs[8]}
-                        </p>                                                
-                    </div>
+                        </p>
+                        <div className={styles.socials}>
+                            <a className={styles.links}>
+                                X
+                            </a>                        
+                            <a className={styles.links}>
+                                Telegram
+                            </a>
+                        </div>
+                    </div>                    
                     <div className={styles.line}></div>
                 </div>
+                <div className={styles.bottomButtons}>
+                    <AnimatedCVButton/>
+                </div>
             </div>
+        </div>
+    )
+}
+
+function AnimatedCVButton () {
+    return (
+        <div className={styles.cvButtonWrapper}>
+            <a className={`${styles.animatedButton}`}
+            href="/pedro_franceschin-cv.pdf"
+            download
+            >
+                <div className={`${styles.animatedButtonInner} ${styles.cvButton}`}>
+                    <div className={styles.cvIconWrapper}>
+                        <CVIcon/>                                    
+                    </div>
+                </div>
+            </a>
         </div>
     )
 }

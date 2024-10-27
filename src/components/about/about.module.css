@@ -39,7 +39,151 @@
     margin: 8px 0;
     background-color: var(--bg-color);
 }
+.socials {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+.links {
+    font-weight: 500;
+    font-size: 1.125rem;
+    position: relative;
+}
+.links::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+  
+.links:hover::after {
+    width: 100%;
+}
 
+@media(min-width: 744px) {
+    .socials {
+        margin-top: 3rem;
+    }
+    .links {
+        font-size: 1.25rem;
+    }
+}
+.bottomButtons {
+    width: 100%;
+    max-width: 630px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* flex-direction: column;
+    justify-content: space-between;
+    align-items: end; */
+    /* padding-right: 13.33%; */
+    /* padding: 0 var(--xPadding); */
+}
+
+.animatedButton {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #000000; */
+}
+.animatedButtonInner {
+    width: 100%;
+    margin: 4px;
+    color: #000000;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.animatedButton::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 250%;
+    width: 22%;
+    z-index: 0;
+    top: 50%;
+    transform-origin: top center;
+}
+.animatedButton:hover::before {
+    background: linear-gradient(
+        90deg,
+        #BCDCEA 0%,
+        var(--blue) 100%
+    );
+    transform: translate(0);
+    animation: rotate 2s linear forwards infinite;
+}
+
+@media(min-width: 640px) {
+    .bottomButtons {
+        justify-content: start;
+    }
+}
+
+@media(max-width: 1024px) {
+    .animatedButton::before {
+            background: linear-gradient(
+            90deg,
+            #BCDCEA 0%,
+            var(--blue) 100%
+        );
+        transform: translate(0);
+        animation: rotate 2s linear forwards infinite;
+    }
+    .links::after {
+        width: 100%;
+    }
+}
+
+.cvButton {
+    background-color: var(--gold);
+}
+.cvButtonWrapper {
+    width: 50%;
+    min-width: 300px;
+}
+/* .socials {
+    display: flex;
+    justify-content: space-between;
+    width: 66.66667%;
+}
+.socialsbutton {
+    color: var(--gold);
+    border-radius: 50%;
+}
+.socialsButtonWrapper {
+    width: 56px;
+} */
+
+.cvIconWrapper {
+    width: 56px;
+    height: 56px;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
 /* @media(min-width:744px) {
     .textBox {
         padding: 40px;

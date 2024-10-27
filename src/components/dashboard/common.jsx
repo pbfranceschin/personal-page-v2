@@ -1,8 +1,8 @@
 import { openUrl } from "../../utils";
-import { CVIcon, GlobeIconLarge, MailIconLarge } from "../graphics/graphics";
+import { CVIconWrapped, GlobeIconLarge, MailIconLarge } from "../graphics/graphics";
 
 export const pageIcon = {
-    "ABOUT": <CVIcon/>,
+    "ABOUT": <CVIconWrapped/>,
     "BUSINESS": <GlobeIconLarge/>,
     "PORTFOLIO": <MailIconLarge/>,
     "PROJECTS": <GlobeIconLarge/>
