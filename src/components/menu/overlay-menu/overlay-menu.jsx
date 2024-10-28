@@ -46,7 +46,7 @@ function Overlay ({ animationClass, handleClickOverlayBackdrop }) {
             </div>
             <div 
             style={{
-                position:'fixed',
+                position:'absolute',
                 bottom: 0,
                 left: 0,
                 right:0,
@@ -54,13 +54,16 @@ function Overlay ({ animationClass, handleClickOverlayBackdrop }) {
                 width: 'fit-content',
                 display:'flex',
                 flexDirection: 'column',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                paddingBottom: '0.5rem',
+                gap: '0.25rem'
             }}>
+                {/* <span className={styles.footnote}>selfhosted using Coolify</span> */}
                 <span className={styles.footnote}>
-                    stack: React + Vite (no js libs were used)
-                </span>
+                    <span style={{ textDecoration: 'underline'}}>Stack</span>: selfhosted using Coolify &middot; React + Vite (no js libs)
+                </span>                
                 <span className={styles.footnote}>
-                    background art: <i>La Esfinge</i>, by David Gore.
+                    <span style={{ textDecoration: 'underline'}}>Background art</span>: <i>La Esfinge</i>, by David Gore.
                 </span>
             </div>
         </div>

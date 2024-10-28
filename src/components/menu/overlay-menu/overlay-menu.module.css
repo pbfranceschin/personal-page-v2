@@ -104,8 +104,15 @@
 
 .footnote {
     opacity: 0.6;
-    margin: 8px;
+    /* margin: 8px; */
     text-align: center;
+    text-wrap: balance;
+    font-size: 0.75rem;
+}
+@media(min-width: 744px) {
+    .footnote {
+        font-size: 0.875rem;
+    }
 }
 
 @media (min-width: 1025px) {
