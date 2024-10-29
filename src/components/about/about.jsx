@@ -63,10 +63,16 @@ export default function About () {
                             {about.paragraphs[8]}
                         </p>
                         <div className={styles.socials}>
-                            <a className={styles.links}>
+                            <a className={styles.links}
+                            href='https://x.com/pbfranceschin'
+                            target='_blank'
+                            rel='noopener noreferrer'                    
+                            >
                                 X
                             </a>                        
-                            <a className={styles.links}>
+                            <a className={styles.links}
+                            href='https://t.me/pfranc22'
+                            >
                                 Telegram
                             </a>
                         </div>

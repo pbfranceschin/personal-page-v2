@@ -81,10 +81,16 @@ function DappsGroup ({ isOpen, handleEntryClick }) {
                     <div className={styles.nameContainer}>                
                             <h3 className={styles.name}>venn protocol</h3>
                             <div className={styles.linksWrapper}>
-                                <a className={styles.links}>
+                                <a className={styles.links}
+                                href='https://github.com/australopitech/venn-protocol'
+                                target='_blank' rel='noopener noreferrer'
+                                >
                                     Github
                                 </a>
-                                <a className={styles.links}>
+                                <a className={styles.links}
+                                href='https://venn-protocol.vercell.app'
+                                target='_blank' rel='noopener noreferrer'
+                                >
                                     App
                                 </a>                                
                             </div>
@@ -130,7 +136,12 @@ function WebAppsGroup ({ isOpen, handleEntryClick }) {
                 <div className={styles.entry}>
                     <div className={styles.nameContainer}>
                             <h3 className={styles.name}>{apps[0].name}</h3>                        
-                            <a className={styles.links}>App</a>
+                            <a className={styles.links}
+                            href='https://deforestationcalculator.conservation-strategy.org/'
+                            target='_blank' rel='noopener noreferrer'
+                            >
+                                App
+                            </a>
                         </div>
                     <div className={styles.entryInfo}>
                         <div className={styles.overlaylogo} 
@@ -164,7 +175,12 @@ function WebPagesGroup ({ isOpen, handleEntryClick }) {
                 <div className={styles.entry}>
                     <div className={styles.nameContainer}>                        
                         <h3 className={styles.name}>{pages[0].name}</h3>
-                        <a className={styles.links}>Website</a>
+                        <a className={styles.links}
+                        href='https://calculators.conservation-strategy.org/'
+                        target='_blank' rel='noopener noreferrer'
+                        >
+                            Website
+                        </a>
                     </div>
                     <div className={styles.entryInfo}>     
                         <div className={styles.overlaylogo} 

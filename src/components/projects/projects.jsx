@@ -23,10 +23,16 @@ export default function Projects() {
                     </p>
                     <div className={styles.linksContainer}>
                         <div className={styles.linksWrapper}>
-                            <a className={styles.links}>
+                            <a className={styles.links}
+                            href='https://github.com/australopitech/venn-protocol'
+                            target='_blank' rel='noopener noreferrer'
+                            >
                                 Github
                             </a>
-                            <a className={styles.links}>
+                            <a className={styles.links}
+                            href='https://venn-protocol.vercel.app'
+                            target='_blank' rel='noopener noreferref'
+                            >
                                 Website
                             </a>
                         </div>

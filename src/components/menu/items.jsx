@@ -67,7 +67,11 @@ export const Switches = () => {
 export const Work = () => {
     return (
         <div className={styles.workContainer}>
-            <a className={styles.bigIcon}><MailIcon /></a>
+            <a className={styles.bigIcon}
+            href='mailto:pbfranceschin@gmail.com'
+            >
+                <MailIcon />
+            </a>
             <a className={styles.bigIcon}><VennLogo /></a>
         </div>
     )
@@ -76,22 +80,22 @@ export const Work = () => {
 export const Socials = () => {
     return (
         <div className={styles.socialsContainer}>
-            <a>
+            <a href='https://github.com/pbfranceschin' target='_blank' rel='noopener noreferrer'>
                 <div className={styles.smallIcon}>
                     <GitHubIcon/>
                 </div>
             </a>
-            <a>
+            <a href='https://x.com/pbfranceschin' target='_blank' rel='noopener noreferrer'>
                 <div className={styles.smallIcon}>
                     <XIcon/>
                 </div>
             </a>
-            <a>
+            <a href='https://medium.com/@pbfranceschin' target='_blank' rel='noopener noreferrer'>
                 <div className={styles.smallIcon}>
                     <MediumIcon/>
                 </div>
             </a>
-            <a>
+            <a href='https://www.linkedin.com/in/pedro-franceschin-16278015b/' target='_blank' rel='noopener noreferrer'>
                 <div className={styles.smallIcon}>
                     <LinkedInIcon/>    
                 </div>
