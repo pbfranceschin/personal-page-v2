@@ -74,7 +74,6 @@
 }
 .links {
     font-weight: 500;
-    font-size: 1.125rem;
     position: relative;
 }
 
@@ -101,7 +100,7 @@
 
 @media(min-width: 744px) {
     .links {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
 }
 
