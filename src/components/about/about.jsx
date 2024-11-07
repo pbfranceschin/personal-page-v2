@@ -47,20 +47,23 @@ export default function About () {
                             {about.paragraphs[4]}
                             <br/>
                             <br/>
-                            {about.paragraphs[5]}
+                            {about.paragraphs[5]}                        
+                            <br/>
+                            <br/>        
+                            {about.paragraphs[6]}
+                            <br/>
+                            <br/>
+                            {about.paragraphs[7]}
                         </p>                                                
                     </div>
                 </div>
                 <div className={styles.textBoxContainer}>
                     <div className={styles.textBox}>
                         <p>
-                            {about.paragraphs[6]}
-                            <br/>
-                            <br/>
-                            {about.paragraphs[7]}
-                            <br/>
-                            <br/>
                             {about.paragraphs[8]}
+                            <br/>
+                            <br/>
+                            {about.paragraphs[9]}
                         </p>
                         <div className={styles.socials}>
                             <a className={styles.links}
