@@ -26,12 +26,12 @@ export default function Business() {
                 </a>
                 <p>
                     <span style={{ fontWeight: '700', fontStyle: 'italic'}}>Venn </span>
-                    {business.venn.description.map((item) => {
+                    {business.venn.description.map((item, i) => {
                         return (
-                            <>
+                            <span key={i}>
                             {item}
                             <br/><br/>
-                            </>
+                            </span>
                         )
                     })}
                     {/* <span style={{ opacity: 0.6}}>
