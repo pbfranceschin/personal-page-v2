@@ -128,10 +128,10 @@ export default function DashboardMobile ({ pageRef }) {
 }
 
 function PageMenuRow1 ({ page, onClick, link }) {
-    // const { portuguese } = useContext(AppContext);
-    // const language = useMemo(() => portuguese ? PT : EN, [portuguese]);
+    const { portuguese } = useContext(AppContext);
+    const language = useMemo(() => portuguese ? PT : EN, [portuguese]);
 
-    const title = pageTitles[EN][`${page}`];
+    const title = pageTitles[language][`${page}`];
     const { background, color } = pageStyles[`${page}`];
     const icon = pageIcon[`${page}`];
 
@@ -154,7 +154,7 @@ function PageMenuRow1 ({ page, onClick, link }) {
                 <button 
                 className={styles.topButton}
                 style={{ 
-                    paddingInline: '1rem',
+                    padding: '1rem',
                     backgroundColor: background.primary, 
                     color: color.primary
                 }}
@@ -162,10 +162,8 @@ function PageMenuRow1 ({ page, onClick, link }) {
                 >
                     <h2
                     style={{ 
-                        width: '60%',
                         textTransform: 'uppercase',
-                        textAlign: 'left',
-                        textWrap: 'balance'
+                        textAlign: 'right',
                     }}
                     >{title}</h2>
                 </button>

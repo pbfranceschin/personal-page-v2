@@ -171,11 +171,15 @@
     height: 170px;
     text-align: left;
     display: flex;
-    justify-content: start;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
     padding: 24px;
     /* animation: borderColorShift 1.5s ease-in-out 0.25s forwards; */
 }
+
+/* .pageTitle {
+    font-size: 
+} */
 
 /* .titleButton::after {
     content: '';

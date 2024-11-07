@@ -1,6 +1,6 @@
-import { useCallback, useContext, useEffect, useRef, useState } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState, useMemo } from 'react';
 import styles from './dashboard-tablet.module.css';
-import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS, EN } from '../../../context/provider';
+import { AppContext, HOME, ABOUT, BUSINESS, PORTFOLIO, PROJECTS, EN, PT } from '../../../context/provider';
 import { pageTitles, pageStyles, pageIcon, pageLink } from '../common';
 import { BackIcon, BusinessIcon,  HammerIcon, InfoIcon, PortfolioIcon } from '../../graphics/graphics';
 import { scrollToRef } from '../../../utils';
@@ -194,7 +194,9 @@ const ResourceButton = ({ page, link }) => {
 }
 
 const TitleButton = ({ page, onClick }) => {
-    const title = pageTitles[EN][`${page}`];
+    const { portuguese } = useContext(AppContext);
+    const language = useMemo(() => portuguese ? PT : EN, [portuguese]);
+    const title = pageTitles[language][`${page}`];
     const { background, color } = pageStyles[`${page}`];
     const style={
         background: background.primary,
@@ -207,8 +209,8 @@ const TitleButton = ({ page, onClick }) => {
         style={style}
         >
             <h2 style={{ 
-                textTransform: 'uppercase', 
-                width: '70%'
+                textTransform: 'uppercase',
+                textAlign: 'right'
             }}>{title}</h2>
         </button>
     )

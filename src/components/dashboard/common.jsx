@@ -18,16 +18,16 @@ export const pageLink = {
 
 export const pageTitles = {
     "en":{
-        "ABOUT": "about pedro's work",
-        "BUSINESS": "pedro's business ventures",
-        "PORTFOLIO": "pedro's work portfolio",
-        "PROJECTS": "pedro's own projects",
+        "ABOUT": "About",
+        "BUSINESS": "Business",
+        "PORTFOLIO": "Portfolio",
+        "PROJECTS": "Projects",
     },
     "pt": {
-        "ABOUT": "sobre trabalhos do pedro",
-        "BUSINESS": "negócios do pedro",
-        "PORTFOLIO": "portfolio do pedro",
-        "PROJECTS": "projetos autorais do pedro",
+        "ABOUT": "Sobre",
+        "BUSINESS": "negócios",
+        "PORTFOLIO": "portfolio",
+        "PROJECTS": "projetos",
     }
 }
 

@@ -23,10 +23,10 @@
                 "clientSolo": "Developed solo for "
             },
             "dashboard": {
-                "about": "about pedro's work",
-                "business": "pedro's business ventures",
-                "portolio": "pedro's work portfolio",
-                "projects": "pedro's own projects"
+                "about": "About",
+                "business": "Business ventures",
+                "portolio": "Portfolio",
+                "projects": "Projects"
             },
             "footnote": {
                 "background": "background art:",
@@ -130,10 +130,10 @@
                 "clientSolo": "Desenvolvido solo para "
             },
             "dashboard": {
-                "about": "about pedro's work",
-                "business": "pedro's business ventures",
-                "portolio": "pedro's work portfolio",
-                "projects": "pedro's own projects"
+                "about": "Sobre",
+                "business": "Negócios",
+                "portolio": "Portfolio",
+                "projects": "Projetos"
             },
             "footnote": {
                 "background": "arte de fundo:",

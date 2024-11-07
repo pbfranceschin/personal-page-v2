@@ -87,6 +87,9 @@
     height: 80px;
     cursor: pointer;
     border: none;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
 .backButton {
