@@ -60,10 +60,10 @@ function Overlay ({ animationClass, handleClickOverlayBackdrop }) {
             }}>
                 {/* <span className={styles.footnote}>selfhosted using Coolify</span> */}
                 <span className={styles.footnote}>
-                    <span style={{ textDecoration: 'underline'}}>Stack</span>: selfhosted using Coolify &middot; React + Vite (no js libs)
+                    <span className={styles.label}>Stack</span>: selfhosted using Coolify &middot; React + Vite (no js libs)
                 </span>                
                 <span className={styles.footnote}>
-                    <span style={{ textDecoration: 'underline'}}>Background art</span>: <i>La Esfinge</i>, by David Gore.
+                    <span  className={styles.label}>Background art</span>: <i>La Esfinge</i>, by David Gore.
                 </span>
             </div>
         </div>

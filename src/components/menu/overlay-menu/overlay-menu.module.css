@@ -108,10 +108,18 @@
     text-align: center;
     text-wrap: balance;
     font-size: 0.75rem;
+    letter-spacing: .1em;
+}
+.label {
+    font-size: .875rem;
+    font-weight: 300;
 }
 @media(min-width: 744px) {
     .footnote {
         font-size: 0.875rem;
+    }
+    .label {
+        font-size: 1.125rem;
     }
 }
 
